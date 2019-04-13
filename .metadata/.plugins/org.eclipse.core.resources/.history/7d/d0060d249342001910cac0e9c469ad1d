@@ -1,0 +1,78 @@
+package com.dao;
+
+import java.net.UnknownHostException;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.MongoClient;
+
+public class PlainMongoDbConnector implements DbConnector {
+
+	private static MongoClient mongoClient=null;
+	
+	public PlainMongoDbConnector(String server,Integer port) {
+		
+		try {
+			if(mongoClient==null)
+				mongoClient=new MongoClient(server,port);	
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public void insert(User user,String db,String collection) {
+		
+		DB database = mongoClient.getDB(db);
+		BasicDBObject document = new BasicDBObject();
+	
+		document.put("name",user.getName());
+		document.put("password",user.getPassword());
+		document.put("role",user.getRole());
+		document.put("isAccountVerified",user.isAccountVerified());
+		document.put("vCode",user.getvCode());
+		document.put("vCodeValidTs",user.getvCodeValidTs().toString());
+		
+		DBCollection table = database.getCollection(collection);
+		table.insert(document);
+	}
+	
+	public void getCounter() {
+		
+		DB db = mongoClient.getDB("EasyTapp");
+		DBCollection collection = db.getCollection("counters");
+		
+		BasicDBObject doc=(BasicDBObject) collection.findOne();
+		int seqValue=(Integer) doc.get("seq");
+		System.out.println();
+		
+		BasicDBObject queryObj=new BasicDBObject();
+		queryObj.put("seq",seqValue);
+		
+		BasicDBObject newDocument = new BasicDBObject();
+		newDocument.put("seq",seqValue+1);
+					
+		BasicDBObject updateObj = new BasicDBObject();
+		updateObj.put("$set", newDocument);
+		collection.update(queryObj, updateObj);
+		
+/*		BasicDBObject query = new BasicDBObject();
+		int value=(Integer) query.get("seq");
+
+		BasicDBObject oldDocument = new BasicDBObject();
+		oldDocument.put("seq",value);
+		
+		System.out.println(value);
+		BasicDBObject newDocument = new BasicDBObject();
+		newDocument.put("seq",value+1);
+					
+		BasicDBObject updateObj = new BasicDBObject();
+		updateObj.put("$set", newDocument);
+
+		table.update(oldDocument, updateObj);
+		*/
+	}
+}

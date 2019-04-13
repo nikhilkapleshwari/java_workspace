@@ -1,0 +1,12 @@
+package com.dao;
+
+public class TestRunner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PlainMongoDbConnector plainMongoDbConnector=new PlainMongoDbConnector("localhost",27017);
+		User user=new User(1,"nikhil",2000);
+		plainMongoDbConnector.insert(object, db, collection);
+	}
+
+}

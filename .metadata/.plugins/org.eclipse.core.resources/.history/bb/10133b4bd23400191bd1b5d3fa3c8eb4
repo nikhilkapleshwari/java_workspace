@@ -1,0 +1,25 @@
+package com.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class AccountService {
+
+	private static Map<String,String> signupMap=new HashMap<String,String>();
+	
+	public static void addAccount(final String userName) {
+		
+		signupMap.put(userName, AccountService.generatevCode());
+	}
+	public static String generatevCode() {
+		
+		return "98765";
+	}
+	
+	
+	public static Boolean verifyAccount(final String userName,final String vCode) {
+		
+		
+		return Boolean.FALSE;
+	}
+}

@@ -1,0 +1,9 @@
+package com.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.dao.User;
+
+public interface CounterRepository extends MongoRepository<Counter,String>{
+
+}

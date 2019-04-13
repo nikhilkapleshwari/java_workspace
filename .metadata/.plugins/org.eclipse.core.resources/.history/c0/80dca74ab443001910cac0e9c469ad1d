@@ -1,0 +1,25 @@
+package com.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.Person;
+import com.PersonRepository;
+
+@Component
+public class UserService {
+
+	@Autowired
+	PersonRepository personRepository;
+	
+	public void sayHello() {
+		System.out.println("Hello guys!");
+	}
+	
+	public List<Person> getAllPerson(){
+		List<Person> personList=personRepository.findAll();
+		personList.forEach(p->System.out.println(p.toString()));
+	}
+}

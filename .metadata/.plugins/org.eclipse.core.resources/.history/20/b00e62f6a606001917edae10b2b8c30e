@@ -1,0 +1,21 @@
+package com.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class AuthService {
+
+	private static Map<String,String> map=new HashMap<String,String>();
+	
+	public void addUser(final String userName,final String password) {
+		map.put(userName,password);
+	}
+	
+	public String getUser(final String userName) {
+		return map.get(userName);
+	}
+	
+	public boolean validateUser(final String userName,final String password) {
+		
+	}
+}

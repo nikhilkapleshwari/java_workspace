@@ -1,0 +1,30 @@
+package com.service;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
+public class AccountService {
+
+	private static Map<String,String> signupMap=new HashMap<String,String>();
+	
+	public static String addAccount(final String userName) {
+		System.out.println("Entry Added in map:"+userName+","+AccountService.generatevCode());
+		String vCode=AccountService.generatevCode();
+		signupMap.put(userName, vCode);
+		return vCode;
+	}
+	public static String generatevCode() {
+		int value=(int)Math.round(Double.valueOf(Math.random()*100000));
+		return String.valueOf(value);
+	}
+	
+	
+	public static Boolean verifyAccount(final String userName,final String vCode) {
+		System.out.println("in verifyAccount:"+userName+","+vCode);
+		String storedvCode=signupMap.get(userName);
+		if(storedvCode.equals(vCode))
+			return Boolean.TRUE;
+		return Boolean.FALSE;
+	}
+}

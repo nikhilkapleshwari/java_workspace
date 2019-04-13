@@ -1,0 +1,24 @@
+package com;
+
+import java.net.UnknownHostException;
+import java.util.List;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.mongodb.MongoClient;
+
+@SpringBootApplication(scanBasePackages = { "com" })
+public class MongoRunner {
+
+	public static void main(String[] args) throws UnknownHostException {
+		// TODO Auto-generated method stub
+		
+		MongoClient mongo = new MongoClient( "localhost" , 27017 );
+
+		List<String> dbs = mongo.getDatabaseNames();
+		for(String db : dbs){
+			System.out.println(db);
+		}
+	}
+
+}

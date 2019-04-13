@@ -1,0 +1,26 @@
+package com.dao;
+
+import java.net.UnknownHostException;
+
+import com.mongodb.Mongo;
+import com.mongodb.MongoClient;
+
+public class PlainMongoDbConnector implements DbConnector {
+
+	private String server;
+	private Integer port;
+	
+	PlainMongoDbConnector(String server,Integer port){
+		this.server=server;
+		this.port=port;
+	}
+	
+	private MongoClient getMongoClient() {
+		try {
+			return new MongoClient(this.server,this.port);
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

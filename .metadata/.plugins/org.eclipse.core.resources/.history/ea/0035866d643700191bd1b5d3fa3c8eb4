@@ -1,0 +1,13 @@
+package testing;
+
+import java.util.Random;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Double value=Double.valueOf(Math.random()*100000);
+		System.out.println();
+		
+	}
+
+}

@@ -1,0 +1,35 @@
+package com;
+
+
+
+import java.time.LocalDateTime;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+
+import com.dao.MongoDao;
+import com.model.User;
+
+@SpringBootApplication(scanBasePackages = { "com" })
+@EnableMongoRepositories(basePackages = "com")
+public class Application {
+	
+	@Autowired
+	MongoDao mongoDao;
+	
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context=SpringApplication.run(Application.class, args);
+		Application app=context.getBean(Application.class);
+		app.execute();
+		User user=new User("nikhil","password","admin",Boolean.FALSE,"12345",LocalDateTime.now());
+		user.setId(1);
+		
+	}
+	
+	public void execute() {
+		
+	}
+}

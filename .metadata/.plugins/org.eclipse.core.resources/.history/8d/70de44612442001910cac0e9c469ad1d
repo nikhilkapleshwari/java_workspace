@@ -1,0 +1,39 @@
+package com.dao;
+
+import java.lang.reflect.Field;
+import java.net.UnknownHostException;
+
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.MongoClient;
+
+public class PlainMongoDbConnector implements DbConnector {
+
+	private static MongoClient mongoClient=null;
+	
+	public PlainMongoDbConnector(String server,Integer port) {
+		
+		try {
+			if(mongoClient==null)
+				mongoClient=new MongoClient(server,port);	
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public static void insert(Object object,String db,String collection) {
+		
+		Field[] fieldList= object.getClass().getFields();
+		System.out.println(fieldList[0].getName());
+		DB database = mongoClient.getDB(db);
+		BasicDBObject document = new BasicDBObject();
+		document.put("id", "1");
+		document.put("name","Nikhil");
+		document.put("salary","1000");
+		DBCollection table = database.getCollection(collection);
+		table.insert(document);
+	}
+	
+}

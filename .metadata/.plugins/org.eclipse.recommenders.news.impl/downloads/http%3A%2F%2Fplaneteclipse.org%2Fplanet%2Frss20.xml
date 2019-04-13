@@ -1,0 +1,1207 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+
+<channel>
+	<title>Planet Eclipse</title>
+	<link>http://planeteclipse.org/planet/</link>
+	<language>en</language>
+	<description>Planet Eclipse - http://planeteclipse.org/planet/</description>
+
+<item>
+	<title>Eclipse Announcements: How to participate in advancing Jakarta EE Specification: Technical and Collateral material related work</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/kj_9CIf7Pqg/how-participate-advancing-jakarta-ee-specification-technical-and-collateral</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/kj_9CIf7Pqg/how-participate-advancing-jakarta-ee-specification-technical-and-collateral</link>
+	<description>We have heard from members of the community some suggestions on what they need from the specification, but we can always use more!&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/kj_9CIf7Pqg&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Fri, 05 Apr 2019 12:40:00 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: Renaming Java EE Specifications for Jakarta EE</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/bFDGTTrgvmk/renaming-java-ee-specifications-jakarta-ee</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/bFDGTTrgvmk/renaming-java-ee-specifications-jakarta-ee</link>
+	<description>As we prepare to engage in actual specification work, it's time to start thinking about changing the names of the specifications and the projects that contain their artifacts.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/bFDGTTrgvmk&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Fri, 05 Apr 2019 12:40:00 +0000</pubDate>
+</item>
+<item>
+	<title>N4JS: Develop a React app in N4JS</title>
+	<guid isPermaLink="false">tag:blogger.com,1999:blog-7569987920628430132.post-2700396086206641147</guid>
+	<link>https://n4js.blogspot.com/2019/04/develop-react-app-in-n4js.html</link>
+	<description>&lt;a href=&quot;https://reactjs.org/&quot; target=&quot;_blank&quot;&gt;React&lt;/a&gt; is a popular JavaScript library created by Facebook widely used for developing web user interface. N4JS provides full support for React as well as the JavaScript extension &lt;a href=&quot;https://facebook.github.io/jsx/&quot; target=&quot;_blank&quot;&gt;JSX&lt;/a&gt; for describing UI elements. Internally, we have been using N4JS in combination with React and JSX for years to develop very large e-commerce web applications.&lt;br /&gt;&lt;br /&gt;In this blog post, we would like to show you the support of React and JSX in N4JS. In particular, we will implement the game Tic-tac-toe in N4JS. The implementation is heavily based on the pure JavaScript version in the tutorial &lt;a href=&quot;https://reactjs.org/tutorial/tutorial.html&quot; target=&quot;_blank&quot;&gt;Tictactoe in React&lt;/a&gt;. In this post, we will focus on N4JS specifics as well as on the advantages of using N4JS over pure JavaScript.&lt;br /&gt;&lt;br /&gt;As typical with Rect applications, the first step is to design a tree of React components to represent the application.&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://4.bp.blogspot.com/-XiSxGN0f70A/XKYoXaGEjAI/AAAAAAAAAGw/0dz5lD3jDqwGKFD1ZNudKOMCbp9PhZJ5wCLcBGAs/s1600/tictactoe-react-components.png&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;276&quot; src=&quot;https://4.bp.blogspot.com/-XiSxGN0f70A/XKYoXaGEjAI/AAAAAAAAAGw/0dz5lD3jDqwGKFD1ZNudKOMCbp9PhZJ5wCLcBGAs/s400/tictactoe-react-components.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;The root React component is Game that consists of two areas. The left area is the React component Board showing the Tic-tac-toe board while the right area shows the game information.&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;N4JS type definitions of React&lt;/h3&gt;In order to make use of N4JS's type checking for React, we need to declare &lt;span&gt;@n4jsd/react&lt;/span&gt; as dev dependency in &lt;span&gt;package.json&lt;/span&gt;. &lt;span&gt;@n4jsd/react,&lt;/span&gt;&lt;span style=&quot;font-family: inherit;&quot;&gt; provided by us as a public npm,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;font-family: inherit;&quot;&gt;consists of &lt;/span&gt;&lt;span&gt;n4jsd&lt;/span&gt;&lt;span style=&quot;font-family: inherit;&quot;&gt; files that contain file definitions for React.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;p1&quot;&gt;{&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;: &lt;/span&gt;&quot;tictactoe&quot;&lt;span class=&quot;s1&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #931a68;&quot;&gt;&quot;devDependencies&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;span class=&quot;Apple-tab-span&quot;&gt; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&quot;@n4jsd/react&quot;&lt;span class=&quot;s1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;s3&quot;&gt;&quot;&amp;lt;=16.6.*&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot; style=&quot;color: #6c9fe9;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot;color: #6c9fe9;&quot;&gt;},&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&quot;dependencies&quot;&lt;span class=&quot;s1&quot;&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot; style=&quot;color: #6c9fe9;&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span style=&quot;color: #6c9fe9;&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;s3&quot;&gt;&quot;^16.6.0&quot;&lt;/span&gt;&lt;span style=&quot;color: #6c9fe9;&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;}&lt;/div&gt;                                        &lt;br /&gt;&lt;div class=&quot;p1&quot;&gt;}&lt;/div&gt;&lt;br /&gt;&lt;h3&gt;File extension n4jsx&lt;/h3&gt;&lt;br /&gt;The standard file extension of N4JS is .n4js. N4JS files containing React and JSX must have the extension .n4jsx&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;Square React component&lt;/h3&gt;The Square React component defines a single square of the Tic-tac-toe board that can be clicked by the current user. Its value is either &lt;b&gt;X&lt;/b&gt; or &lt;b&gt;O or null &lt;/b&gt;depending on which user is in turn or if the square is empty. In this example, we define Square as a lightweight functional component since it does not have any state.&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;p1&quot;&gt;/**&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;* Square props&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;*/&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;interface&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; ~SquareProps &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;extends&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;React.ComponentProps&lt;span class=&quot;s2&quot;&gt; {&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt; value: &lt;span class=&quot;s3&quot;&gt;string&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; onClick: &lt;/span&gt;{function():&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;void}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;}&lt;/div&gt;&lt;div class=&quot;p4&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;/**&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;* Square React component&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;*/&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;function&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; Square(props: &lt;/span&gt;SquareProps&lt;span class=&quot;s2&quot;&gt;): &lt;/span&gt;React.Element&amp;lt;?&amp;gt;&lt;span class=&quot;s2&quot;&gt; {&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p5&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;b&gt;return&lt;/b&gt;&lt;span class=&quot;s2&quot;&gt; (&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&amp;lt;button className=&lt;span class=&quot;s4&quot;&gt;&quot;square&quot;&lt;/span&gt; onClick={props.onClick}&amp;gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;      &lt;/span&gt;{props.value}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&amp;lt;/button&amp;gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;  &lt;/span&gt;);&lt;/div&gt;                   &lt;br /&gt;&lt;div class=&quot;p3&quot;&gt;}&lt;/div&gt;&lt;br /&gt;The functional definition of Square must have a single &lt;span&gt;props&lt;/span&gt; parameter and return an instance of type &lt;span&gt;React.Element&lt;/span&gt;.&lt;br /&gt;&lt;br /&gt;When a &lt;span&gt;Square&lt;/span&gt; is instantiated, it expects two mandatory props described by &lt;span&gt;SquareProps&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;span&gt;value&lt;/span&gt;: the value of the square, either &lt;span&gt;X&lt;/span&gt;, &lt;span&gt;O&lt;/span&gt; or &lt;span&gt;null&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;onClick&lt;/span&gt;: the event handler to be called when the square is clicked&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;&lt;span&gt;SquareProps&lt;/span&gt;, as any data structure describing props of a React component, must extend &lt;span&gt;React.ComponentProps&lt;/span&gt;. In addition to having explicit types, the props can be declared as mandatory (as in this example) or optional with the help of the question mark. For instance,  if you declared&lt;span class=&quot;Apple-converted-space&quot;&gt;  &lt;/span&gt;&lt;span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt; value?: &lt;span class=&quot;s3&quot;&gt;string&lt;/span&gt;&lt;/span&gt;, &lt;span&gt;value&lt;/span&gt; would be an optional prop.&lt;br /&gt;&lt;br /&gt;Here we start to see the advantages of N4JS over the pure non-type JavaScript implementation. When a Square component is created, the compiler will enforce the type of the props. Moreover, it will complain if a mandatory prop is missing. And all these checks happen &lt;i&gt;&lt;b&gt;at compile time&lt;/b&gt;&lt;/i&gt;. In pure JavaScript, we will recognize those mistakes only at runtime.&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;Board component&lt;/h3&gt;The Board React component represents the Tic-tac-toe board. Even though it does not have state, we define it as a class because it contains a helper method.&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;p1&quot;&gt;/**&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;* Board props&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;*/&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;interface&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; ~BoardProps &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;extends&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;React.ComponentProps&lt;span class=&quot;s2&quot;&gt; {&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt; squares: &lt;span class=&quot;s3&quot;&gt;[string]&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; onClick: &lt;/span&gt;{function(int):&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;void}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;}&lt;/div&gt;&lt;div class=&quot;p4&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;/**&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;* Board React component&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;*/&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;class&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; Board &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;extends&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;React.Component&amp;lt;BoardProps,&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;Object&amp;gt;&lt;span class=&quot;s2&quot;&gt; {&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;  &lt;/span&gt;&lt;/span&gt;/**&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;   &lt;/span&gt;* Render the i-th square on the board&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;   &lt;/span&gt;*/&lt;span class=&quot;s2&quot;&gt;&lt;span class=&quot;Apple-tab-span&quot;&gt; &lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;  &lt;/span&gt;renderSquare(i: &lt;span class=&quot;s3&quot;&gt;int&lt;/span&gt;) {&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;return&lt;/b&gt;&lt;/span&gt; (&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;      &lt;/span&gt;&amp;lt;Square&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;        &lt;/span&gt;value={&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.props.squares[i]}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;        &lt;/span&gt;onClick={() =&amp;gt; &lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.props.onClick(i)}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;      &lt;/span&gt;/&amp;gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;  &lt;/span&gt;}&lt;/div&gt;&lt;div class=&quot;p4&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;p5&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;  &lt;/span&gt;&lt;/span&gt;@Override&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; render(): &lt;/span&gt;React.Element&amp;lt;?&amp;gt;&lt;span class=&quot;s2&quot;&gt; {&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;return&lt;/b&gt;&lt;/span&gt; (&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;      &lt;/span&gt;&amp;lt;div&amp;gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;        &lt;/span&gt;&amp;lt;div className=&lt;span class=&quot;s4&quot;&gt;&quot;board-row&quot;&lt;/span&gt;&amp;gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;          &lt;/span&gt;{&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.renderSquare(&lt;span class=&quot;s5&quot;&gt;0&lt;/span&gt;)}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;          &lt;/span&gt;{&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.renderSquare(&lt;span class=&quot;s5&quot;&gt;1&lt;/span&gt;)}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;          &lt;/span&gt;{&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.renderSquare(&lt;span class=&quot;s5&quot;&gt;2&lt;/span&gt;)}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;        &lt;/span&gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;        &lt;/span&gt;&amp;lt;div className=&lt;span class=&quot;s4&quot;&gt;&quot;board-row&quot;&lt;/span&gt;&amp;gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;          &lt;/span&gt;{&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.renderSquare(&lt;span class=&quot;s5&quot;&gt;3&lt;/span&gt;)}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;          &lt;/span&gt;{&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.renderSquare(&lt;span class=&quot;s5&quot;&gt;4&lt;/span&gt;)}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;          &lt;/span&gt;{&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.renderSquare(&lt;span class=&quot;s5&quot;&gt;5&lt;/span&gt;)}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;        &lt;/span&gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;        &lt;/span&gt;&amp;lt;div className=&lt;span class=&quot;s4&quot;&gt;&quot;board-row&quot;&lt;/span&gt;&amp;gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;          &lt;/span&gt;{&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.renderSquare(&lt;span class=&quot;s5&quot;&gt;6&lt;/span&gt;)}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;          &lt;/span&gt;{&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.renderSquare(&lt;span class=&quot;s5&quot;&gt;7&lt;/span&gt;)}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;          &lt;/span&gt;{&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.renderSquare(&lt;span class=&quot;s5&quot;&gt;8&lt;/span&gt;)}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;        &lt;/span&gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;      &lt;/span&gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;  &lt;/span&gt;}&lt;/div&gt;                                                &lt;br /&gt;&lt;div class=&quot;p3&quot;&gt;}&lt;/div&gt;&lt;br /&gt;The Board class, as any class representing a React component, must extend &lt;span&gt;React.Component&lt;/span&gt;. Note that &lt;span&gt;React.Component&lt;/span&gt;&lt;span style=&quot;font-family: inherit;&quot;&gt; expects two type arguments: the first type argument is the type of props and the second type argument is the type of state.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Here, in the &lt;span&gt;render&lt;/span&gt; method we simply create 9 Squares that make up the board.&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;Game React component&lt;/h3&gt;This is the root React component of this application and hence does not have any props. Instead, it has state represented by &lt;span&gt;GameState&lt;/span&gt; which stores the history of the board, the step number and whether the next player is &lt;span&gt;X&lt;/span&gt;.&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;p1&quot;&gt;/**&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;* Game state&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;*/&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;interface&lt;/b&gt;&lt;/span&gt; ~GameState {&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; history: &lt;/span&gt;Array&amp;lt;~Object&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;with&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;{&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;squares:&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;Array&amp;lt;string&amp;gt;}&amp;gt;&lt;span class=&quot;s2&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt; stepNumber: &lt;span class=&quot;s3&quot;&gt;int&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt; xIsNext: &lt;span class=&quot;s3&quot;&gt;boolean&lt;/span&gt;;&lt;/div&gt;         &lt;br /&gt;&lt;div class=&quot;p2&quot;&gt;}&lt;/div&gt;&lt;br /&gt;&lt;div class=&quot;p1&quot;&gt;/**&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;* Game React component (root)&lt;/div&gt;&lt;div class=&quot;p1&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;*/&lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;export&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;default&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;class&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; Game &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;extends&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;React.Component&amp;lt;React.ComponentProps,&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;GameState&amp;gt;&lt;span class=&quot;s2&quot;&gt; {&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt; constructor(props: &lt;span class=&quot;s3&quot;&gt;React.ComponentProps&lt;/span&gt;) {&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;super&lt;/b&gt;&lt;/span&gt;(props);&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&lt;b&gt;this&lt;/b&gt;&lt;/span&gt;.state = {&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;      &lt;/span&gt;history: [&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;        &lt;/span&gt;{&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;          &lt;/span&gt;squares: &lt;span class=&quot;s1&quot;&gt;&lt;b&gt;new&lt;/b&gt;&lt;/span&gt; Array&amp;lt;&lt;span class=&quot;s3&quot;&gt;string&lt;/span&gt;&amp;gt;(&lt;span class=&quot;s4&quot;&gt;9&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;        &lt;/span&gt;}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;      &lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;      &lt;/span&gt;stepNumber: &lt;span class=&quot;s4&quot;&gt;0&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;      &lt;/span&gt;xIsNext: &lt;span class=&quot;s1&quot;&gt;&lt;b&gt;true&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt; &lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;    &lt;/span&gt;};&lt;/div&gt;                 &lt;br /&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;  &lt;/span&gt;}&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;  ...&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;&lt;span style=&quot;color: #ff40ff;&quot;&gt;  &lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;  &lt;span style=&quot;color: #ff40ff;&quot;&gt;@Override&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;p3&quot;&gt;   &lt;/div&gt;&lt;div class=&quot;p2&quot;&gt;&lt;span class=&quot;s1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&lt;b&gt;public&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt; render(): &lt;/span&gt;React.Element&amp;lt;?&amp;gt;&lt;span class=&quot;s1&quot;&gt; {&lt;/span&gt;&lt;/div&gt;&lt;span&gt;  ...&lt;/span&gt;&lt;br /&gt;&lt;span&gt;  }&lt;/span&gt;&lt;br /&gt;&lt;span&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;Here, again thanks to type checking, the N4JS compiler will complain if we access a non-existing field of the state or use the wrong type of a certain field &lt;b&gt;&lt;i&gt;at compile time&lt;/i&gt;&lt;/b&gt;. In pure JavaScript, we will recognize those mistakes only at runtime.&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;Source code&lt;/h3&gt;You can find the source code &lt;a href=&quot;https://github.com/qtran-n4/tictactoe&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;text-align: right;&quot;&gt;                                                                                                                      By Minh Quang Tran&lt;/span&gt;&lt;/div&gt;</description>
+	<pubDate>Fri, 05 Apr 2019 10:07:56 +0000</pubDate>
+	<author>noreply@blogger.com (n4js dev)</author>
+</item>
+<item>
+	<title>Wayne Beaton: Renaming Java EE Specifications for Jakarta EE</title>
+	<guid isPermaLink="false">http://waynebeaton.wordpress.com/?p=5559</guid>
+	<link>https://waynebeaton.wordpress.com/2019/04/04/renaming-java-ee-specifications-for-jakarta-ee/</link>
+	<description>&lt;p&gt;It’s time to change the specification names…&lt;/p&gt;
+&lt;p&gt;When we first moved the APIs and TCKs for the Java EE specifications over to the &lt;a href=&quot;https://projects.eclipse.org/projects/ee4j&quot;&gt;Eclipse Foundation&lt;/a&gt; under the &lt;a href=&quot;https://jakarta.ee/&quot;&gt;Jakarta EE&lt;/a&gt; banner, we kept the existing names for the specifications in place, and adopted placeholder names for the open source projects that hold their artifacts. As we prepare to engage in actual specification work (involving an actual specification document), it’s time to start thinking about changing the names of the specifications and the projects that contain their artifacts.&lt;/p&gt;
+&lt;p&gt;Why change? For starters&lt;span&gt;, it’s just good form to leverage the Jakarta brand. But, more critically, m&lt;/span&gt;&lt;span&gt;any of the existing specification names use trademarked terms that make it either very challenging or impossible to use those names without violating trademark rules.&lt;/span&gt;&lt;span&gt; Motivation for changing the names of the existing open source projects that we’ll turn into specification projects is, I think, a little easier: &lt;/span&gt;&lt;span&gt;“Eclipse Project for …” is a terrible name. So, while the current names for our proto-specification projects have served us well to-date, it’s time to change them. &lt;/span&gt;&lt;span&gt;To keep things simple, we recommend that we just use the name of the specification as the project name. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;With this in mind, we’ve come up with a naming pattern that we believe can serve as a good starting point for discussion. To start with, in order to keep things as simple as possible, we’ll have the project use the same name as the specification (unless there is a compelling reason to do otherwise).&lt;/p&gt;
+&lt;p&gt;The naming rules are relatively simple:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Replace “Java” with “Jakarta” (e.g. “Java Message Service”&lt;span&gt; becomes “Jakarta Message Service”);&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Add a space in cases where names are mashed together (e.g. “JavaMail” becomes “Jakarta Mail”);&lt;/li&gt;
+&lt;li&gt;Add “Jakarta” when it is missing (e.g. “Expression Language” becomes “Jakarta Expression Language”); and&lt;/li&gt;
+&lt;li&gt;Rework names to consistently start with “Jakarta” (“Enterprise JavaBeans” becomes “Jakarta Enterprise Beans”).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This presents us with an opportunity to add even more consistency to the various specification names. Some, for example, are more wordy or descriptive than others; some include the term “API” in the name, and others don’t; etc.&lt;/p&gt;
+&lt;p&gt;We’ll have to sort out what we’re going to do with the &lt;a href=&quot;https://projects.eclipse.org/projects/ee4j.jakartaee-stable&quot;&gt;Eclipse Project for Stable Jakarta EE Specifications&lt;/a&gt;, which provides a home for a small handful of specifications which are not expected to change. I’ll personally be happy if we can at least drop the “Eclipse Project for” from the name&lt;span&gt; (“Jakarta EE Stable”?)&lt;/span&gt;&lt;span&gt;. We’ll also have to sort out what we’re going to do about the &lt;a href=&quot;https://projects.eclipse.org/projects/ee4j.mojarra&quot;&gt;Eclipse Mojarra&lt;/a&gt; and &lt;a href=&quot;https://projects.eclipse.org/projects/ee4j.metro&quot;&gt;Eclipse Metro&lt;/a&gt; projects which hold the APIs for some specifications; we may end up having to create new specification projects as homes for development of the corresponding specification documents (regardless of how this ends up manifesting as a specification project, we’re still going to need specification names).&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Based on all of the above, here is my suggested &lt;em&gt;starting point&lt;/em&gt; for specification (and most project) names (I’ve applied the rules described above; and have suggested tweaks for consistency by &lt;del&gt;strike out&lt;/del&gt;):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jakarta &lt;del&gt;APIs&lt;/del&gt; for XML Messaging&lt;/li&gt;
+&lt;li&gt;Jakarta &lt;del&gt;Architecture for&lt;/del&gt; XML Binding&lt;/li&gt;
+&lt;li&gt;Jakarta &lt;del&gt;API for&lt;/del&gt; XML&lt;del&gt;-based&lt;/del&gt; Web Services&lt;/li&gt;
+&lt;li&gt;Jakarta Common Annotations&lt;/li&gt;
+&lt;li&gt;Jakarta Enterprise Beans&lt;/li&gt;
+&lt;li&gt;Jakarta Persistence &lt;del&gt;API&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;Jakarta Contexts and Dependency Injection&lt;/li&gt;
+&lt;li&gt;Jakarta EE Platform&lt;/li&gt;
+&lt;li&gt;Jakarta &lt;del&gt;API for&lt;/del&gt; JSON Binding&lt;/li&gt;
+&lt;li&gt;Jakarta Servlet&lt;/li&gt;
+&lt;li&gt;Jakarta &lt;del&gt;API for&lt;/del&gt; RESTful Web Services&lt;/li&gt;
+&lt;li&gt;Jakarta Server Faces&lt;/li&gt;
+&lt;li&gt;Jakarta &lt;del&gt;API for&lt;/del&gt; JSON Processing&lt;/li&gt;
+&lt;li&gt;Jakarta &lt;del&gt;EE&lt;/del&gt; Security &lt;del&gt;API&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;Jakarta Bean Validation&lt;/li&gt;
+&lt;li&gt;Jakarta Mail&lt;/li&gt;
+&lt;li&gt;Jakarta Beans Activation &lt;del&gt;Framework&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;Jakarta Debugging Support for Other Languages&lt;/li&gt;
+&lt;li&gt;Jakarta Server Pages Standard Tag Library&lt;/li&gt;
+&lt;li&gt;Jakarta EE Platform Management&lt;/li&gt;
+&lt;li&gt;Jakarta EE Platform Application Deployment&lt;/li&gt;
+&lt;li&gt;Jakarta &lt;del&gt;API for&lt;/del&gt; XML Registries&lt;/li&gt;
+&lt;li&gt;Jakarta &lt;del&gt;API for&lt;/del&gt; XML-based RPC&lt;/li&gt;
+&lt;li&gt;Jakarta Enterprise Web Services&lt;/li&gt;
+&lt;li&gt;Jakarta Authorization &lt;del&gt;Contract for Containers&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;Jakarta Web Services Metadata&lt;/li&gt;
+&lt;li&gt;Jakarta Authentication &lt;del&gt;Service Provider Interface for Containers&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;Jakarta Concurrency Utlities&lt;/li&gt;
+&lt;li&gt;Jakarta Server Pages&lt;/li&gt;
+&lt;li&gt;Jakarta Connector Architecture&lt;/li&gt;
+&lt;li&gt;Jakarta Dependency Injection&lt;/li&gt;
+&lt;li&gt;Jakarta Expression Language&lt;/li&gt;
+&lt;li&gt;Jakarta Message Service&lt;/li&gt;
+&lt;li&gt;Jakarta Batch&lt;/li&gt;
+&lt;li&gt;Jakarta &lt;del&gt;API for&lt;/del&gt; WebSocket&lt;/li&gt;
+&lt;li&gt;Jakarta Transaction &lt;del&gt;API&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We’re going to couple renaming with an effort to capture proper scope statements (I’ll cover this in my next post). The Eclipse EE4J PMC Lead, Ivar Grimstad, has &lt;a href=&quot;https://www.agilejava.eu/2019/03/18/jakarta-ee-8-status/&quot;&gt;blogged about this recently&lt;/a&gt; and has created a &lt;a href=&quot;https://github.com/orgs/eclipse-ee4j/projects/11&quot;&gt;project board&lt;/a&gt; to track the specification and project renaming activity (as of this writing, it has only just been started, so watch that space). We’ll start reaching out to the “Eclipse Project for …”  teams shortly to start engaging this process. When we’ve collected all of the information (names and scopes), we’ll engage in a restructuring review per the &lt;a href=&quot;https://www.eclipse.org/projects/dev_process/&quot;&gt;Eclipse Development Process&lt;/a&gt; (EDP) and make it all happen (more on this later).&lt;/p&gt;
+&lt;p&gt;Your input is requested. I’ll monitor comments on this post, but it would be better to collect your thoughts in the issues listed on the project board (after we’ve taken the step to create them, of course), on the &lt;a href=&quot;https://github.com/eclipse-ee4j/ee4j/issues/50&quot;&gt;related issue&lt;/a&gt;, or on the &lt;a href=&quot;https://accounts.eclipse.org/mailing-list/ee4j-pmc&quot;&gt;EE4J PMC’s mailing list&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</description>
+	<pubDate>Thu, 04 Apr 2019 14:17:23 +0000</pubDate>
+</item>
+<item>
+	<title>Scott Lewis: New Release:  Python&lt;-&gt;Java Remote Services</title>
+	<guid isPermaLink="false">tag:blogger.com,1999:blog-20358640.post-4192025638966416820</guid>
+	<link>http://eclipseecf.blogspot.com/2019/04/new-release-python-java-remote-services.html</link>
+	<description>There is a new release (2.9.0) of the &lt;a href=&quot;https://github.com/ECF/Py4j-RemoteServicesProvider&quot;&gt;ECF distribution provider&lt;/a&gt; for &lt;a href=&quot;https://wiki.eclipse.org/Eclipse_Communication_Framework_Project&quot;&gt;OSGi R7 Remote Services&lt;/a&gt; between Java and Python.&lt;br /&gt;&lt;br /&gt;This release has:&lt;br /&gt;&lt;br /&gt;An upgraded version of &lt;a href=&quot;https://www.py4j.org/&quot;&gt;Py4j&lt;/a&gt;&lt;br /&gt;An upgraded version of &lt;a href=&quot;https://developers.google.com/protocol-buffers/&quot;&gt;Google Protocol Buffers&lt;/a&gt;&lt;br /&gt;Enhancements to the distribution provider based upon the improved Py4j and Protobuf libs&lt;br /&gt;&lt;br /&gt;In &lt;a href=&quot;http://eclipseecf.blogspot.com/2018/08/osgi-remote-services-between-python-and.html&quot;&gt;this previous blog posting&lt;/a&gt; there are links to tutorials and examples showing how to use remote services between Python&amp;lt;-&amp;gt;Java.&lt;br /&gt;&lt;br /&gt;Python&amp;lt;-&amp;gt;Java remote services can be consumed or implemented in either Java or Python.</description>
+	<pubDate>Thu, 04 Apr 2019 05:42:48 +0000</pubDate>
+	<author>noreply@blogger.com (Scott Lewis)</author>
+</item>
+<item>
+	<title>Tanja Obradovic: How to participate in advancing Jakarta EE Specification: Technical and Collateral material related work</title>
+	<guid isPermaLink="false">https://blogs.eclipse.org/6688 at https://blogs.eclipse.org</guid>
+	<link>https://blogs.eclipse.org/post/tanja-obradovic/how-participate-advancing-jakarta-ee-specification-technical-and-collateral</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/ntDKfTQE_k7haiRm3hR_juSyUyLcSTHGy096zSBF_pYMb6URdzISoxze3MRKPzqtMNpMtPcg5lVz9VAzNLUH0z5ZxJzYfoAePMFgC2sEZ3OwdmWzVKTrlHu5wsw4W84m6lyeI0sT&quot; style=&quot;height: 219px; width: 624px;&quot; /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Technical Work&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;We will need a lot of help on this front as well&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;o   Jakarta EE specifications: specification documents and APIs&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;We have heard from members of the community some suggestions on what they need from the specification, but we can always use more. Get involved in the discussion on Github (&lt;a href=&quot;https://github.com/eclipse-ee4j/jakartaee-platform/issues&quot;&gt;https://github.com/eclipse-ee4j/jakartaee-platform/issues&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;o   Jakarta EE TCK&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;It’s a goliath, inconvenient, and we want to slowly begin to break it up into separate TCKs for each specification. Not for the very first release of Jakarta EE, but we need to start planning and discussing the approach.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;o   Compatible Implementations&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;To make a final version of a specification alive we need specification implementations. Whether the implementation is hosted in Eclipse Foundation or not is not the focus, we need you to implement the specification.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/f6fah-CYgdOPLv1jyee9HuhJwbhEAnbp1ntN6YgCT4FTu9zn100i0JxZOwDL5nXd0arh9XI_rZCNgBk6an0n72WCuTnprR531aMsy_cICVUH9wutZIOtd5L0juPcQP8sBcOjE4Ty&quot; style=&quot;height: 209px; width: 597px;&quot; /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Collateral material related work&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;While we encourage everyone to participate in specification development, please keep in mind this isn’t limited to coding only. Of equal importance is the need for collateral material related to the specification(s). This includes documentation, presentations, videos, demos, examples, blogs, tech talks, etc. This is the type of content we can circulate through the community and use to educate and spread the news on the new specifications. Presenting the material on the conferences is yet another aspect where you can help out also!&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/jakartaee&quot;&gt;#JakartaEE&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/javaee&quot;&gt;#JavaEE&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/communitywork&quot;&gt;#CommunityWork&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/java-0&quot;&gt;#Java&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Wed, 03 Apr 2019 19:13:07 +0000</pubDate>
+</item>
+<item>
+	<title>vert.x project: Eclipse Vert.x 3.7.0 released!</title>
+	<guid isPermaLink="true">https://vertx.io/blog/eclipse-vert-x-3-7-0-released</guid>
+	<link>https://vertx.io/blog/eclipse-vert-x-3-7-0-released</link>
+	<description>&lt;article&gt;&lt;p&gt;We are extremely pleased to announce that the Eclipse Vert.x version 3.7.0 has been released.&lt;/p&gt;
+&lt;p&gt;It is an exciting milestone for a couple of reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;it comes with great new features like the &lt;a href=&quot;http://vertx.io/feed.xml#vertx-web-graphql&quot;&gt;GraphQL extension for Vert.x Web&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;this is the last minor version before Vert.x 4! &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Before we go throught the most notable new features, we would like to thank all the contributors.
+Your participation has been essential to this achievement.&lt;/p&gt;
+&lt;h4 id=&quot;-a-id-vertx-web-graphql-vert-x-web-graphql-a-&quot;&gt;&lt;a id=&quot;vertx-web-graphql&quot;&gt;Vert.x Web GraphQL&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Vert.x Web GraphQL extends Vert.x Web with the &lt;a href=&quot;https://www.graphql-java.com&quot;&gt;GraphQL-Java&lt;/a&gt; library so that you can build a GraphQL server.&lt;/p&gt;
+&lt;p&gt;To use this new module, add the following to the &lt;em&gt;dependencies&lt;/em&gt; section of your Maven POM file:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs xml&quot;&gt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;io.vertx&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;vertx-web-graphql&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;3.7.0&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or, if you use Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;'io.vertx:vertx-web-graphql:3.7.0'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then create a Vert.x Web &lt;code&gt;Route&lt;/code&gt; and a &lt;code&gt;GraphQLHandler&lt;/code&gt; for it:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;// Setup the GraphQL-Java object&lt;/span&gt;
+GraphQL graphQL = setupGraphQLJava();
+&lt;span class=&quot;hljs-comment&quot;&gt;// Use it to handle requests on a Vert.x Web route &lt;/span&gt;
+router.route(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/graphql&quot;&lt;/span&gt;).handler(GraphQLHandler.create(graphQL));&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The GraphQL handler supports out of the box:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;query context customization&lt;/li&gt;
+&lt;li&gt;GraphQL-Java data loaders&lt;/li&gt;
+&lt;li&gt;batching on &lt;code&gt;POST&lt;/code&gt; requests (compatible with the &lt;a href=&quot;https://www.apollographql.com/docs/link/links/batch-http.html&quot;&gt;&lt;code&gt;apollo-link-batch-http&lt;/code&gt;&lt;/a&gt; transport)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For detailed usage instructions, please refer to the &lt;a href=&quot;http://vertx.io/docs/vertx-web-graphql/java/&quot;&gt;Vert.x Web GraphQL documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&quot;vert-x-cassandra-client&quot;&gt;Vert.x Cassandra Client&lt;/h4&gt;
+&lt;h5 id=&quot;object-mapper-support&quot;&gt;Object mapper support&lt;/h5&gt;
+&lt;p&gt;Vert.x Cassandra Client now supports the &lt;a href=&quot;https://github.com/datastax/java-driver/tree/3.x/manual/object_mapper&quot;&gt;cassandra-driver-mapping&lt;/a&gt; module.&lt;/p&gt;
+&lt;p&gt;To enable this feature, you need to update your classpath by adding:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs xml&quot;&gt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;com.datastax.cassandra&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;cassandra-driver-mapping&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;3.7.1&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then for a given entity: &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-annotation&quot;&gt;@Table&lt;/span&gt;(keyspace = &lt;span class=&quot;hljs-string&quot;&gt;&quot;test&quot;&lt;/span&gt;, name = &lt;span class=&quot;hljs-string&quot;&gt;&quot;users&quot;&lt;/span&gt;)
+&lt;span class=&quot;hljs-class&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;User&lt;/span&gt; &lt;/span&gt;{
+  &lt;span class=&quot;hljs-annotation&quot;&gt;@PartitionKey&lt;/span&gt; String name;
+  &lt;span class=&quot;hljs-comment&quot;&gt;// ... other fields and methods &lt;/span&gt;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can retrieve a mapper and execute CRUD operations:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;VertxMappingManager manager = VertxMappingManager.create(cassandraClient);
+VertxMapper mapper = manager.mapper(User.class, vertx);
+mapper.save(&lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; User(&lt;span class=&quot;hljs-string&quot;&gt;&quot;john&quot;&lt;/span&gt;, hander -&amp;gt; {}));&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&quot;collector-api&quot;&gt;Collector API&lt;/h5&gt;
+&lt;p&gt;The feature allows to use Java &lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html&quot;&gt;collectors&lt;/a&gt; for query results:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;// Create a collector projecting a row set to a string in the form (last_name_1,last_name_2,...)&lt;/span&gt;
+Collector collector = Collectors.mapping(
+    row -&amp;gt; row.getString(&lt;span class=&quot;hljs-string&quot;&gt;&quot;last_name&quot;&lt;/span&gt;),
+    Collectors.joining(&lt;span class=&quot;hljs-string&quot;&gt;&quot;,&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;(&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;)&quot;&lt;/span&gt;)
+);
+
+&lt;span class=&quot;hljs-comment&quot;&gt;// Run the query with the collector&lt;/span&gt;
+client.execute(&lt;span class=&quot;hljs-string&quot;&gt;&quot;SELECT * FROM users&quot;&lt;/span&gt;, collector, ar -&amp;gt; {
+  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
+    &lt;span class=&quot;hljs-comment&quot;&gt;// Result in the form (last_name_1,last_name_2,...)&lt;/span&gt;
+    String result = ar.result();
+  } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
+    System.out.println(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Failure: &quot;&lt;/span&gt; + ar.cause().getMessage());
+  }
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&quot;cursor-api&quot;&gt;Cursor API&lt;/h5&gt;
+&lt;p&gt;The &lt;code&gt;ResultSet&lt;/code&gt; object has been enhanced with &lt;code&gt;ResultSet#several&lt;/code&gt; method, allowing you to obtain several rows at once:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;resultSet.several(&lt;span class=&quot;hljs-number&quot;&gt;30&lt;/span&gt;, ar -&amp;gt; {
+  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
+    List result = ar.result();
+  } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
+    System.out.println(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Failure: &quot;&lt;/span&gt; + ar.cause().getMessage());
+  }
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A very useful feature for result batch iterations without resorting to streaming or fetching all rows in memory.&lt;/p&gt;
+&lt;h5 id=&quot;client-lifecyle&quot;&gt;Client lifecyle&lt;/h5&gt;
+&lt;p&gt;The client lifecyle has been revisited in 3.7.&lt;/p&gt;
+&lt;p&gt;Previously users expected to &lt;code&gt;connect&lt;/code&gt; manually before sending requests. It was also possible to &lt;code&gt;disconnect&lt;/code&gt; a shared client
+thus failing requests sent from another verticle or part of the application.&lt;/p&gt;
+&lt;p&gt;Now it is no longer required to manually connect a client (in fact, the method has been removed).&lt;/p&gt;
+&lt;p&gt;As soon as you retrieve an instance you can start using it, the lifecyle is automatically managed:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;CassandraClientOptions options = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; CassandraClientOptions()
+  .addContactPoint(&lt;span class=&quot;hljs-string&quot;&gt;&quot;node1.address&quot;&lt;/span&gt;)
+  .addContactPoint(&lt;span class=&quot;hljs-string&quot;&gt;&quot;node2.address&quot;&lt;/span&gt;)
+  .addContactPoint(&lt;span class=&quot;hljs-string&quot;&gt;&quot;node3.address&quot;&lt;/span&gt;)
+  .setKeyspace(&lt;span class=&quot;hljs-string&quot;&gt;&quot;my_keyspace&quot;&lt;/span&gt;);
+CassandraClient sharedClient = CassandraClient.createShared(vertx, &lt;span class=&quot;hljs-string&quot;&gt;&quot;sharedClientName&quot;&lt;/span&gt;, options);
+&lt;span class=&quot;hljs-comment&quot;&gt;// Start sending requests to Cassandra with the client instance&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Similarly, when the new &lt;code&gt;close&lt;/code&gt; method is invoked on a shared client, only the last active instance will actually disconnect from Cassandra:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;// Disconnects only if this is the last running instance of the shared client&lt;/span&gt;
+sharedClient.close();&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;vert-x-redis-client&quot;&gt;Vert.x Redis Client&lt;/h4&gt;
+&lt;p&gt;The Vert.x Redis client has been reworked internally and provides now a new (more evolution friendly) API.&lt;/p&gt;
+&lt;p&gt;The current API had the limitation of being manually crafted after the redis API and involved many non controlable features
+such as auto reconnect, unlimited buffering of requests, etc… The new API offers a more &lt;em&gt;vert.x-y&lt;/em&gt; experience.&lt;/p&gt;
+&lt;p&gt;It just exposes the base client:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;Redis
+  .createClient(vertx, inetSocketAddress(&lt;span class=&quot;hljs-number&quot;&gt;7006&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;127.0.0.1&quot;&lt;/span&gt;))
+  .connect(create -&amp;gt; {
+    &lt;span class=&quot;hljs-keyword&quot;&gt;final&lt;/span&gt; Redis redis = create.result();
+
+    redis.send(Request.cmd(Command.PING), send -&amp;gt; {
+      &lt;span class=&quot;hljs-comment&quot;&gt;// ... should reply with PONG&lt;/span&gt;
+    });
+  });&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This has the benefits that you can now connect to Redis in any of it’s operation modes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Single server&lt;/li&gt;
+&lt;li&gt;HA mode&lt;/li&gt;
+&lt;li&gt;Cluster mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The API is decoupled from the handcrafted commands, which means that you can use new features such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://redis.io/commands#stream&quot;&gt;streams&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://redis.io/commands#hyperloglog&quot;&gt;hyperloglog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/RedisLabsModules&quot;&gt;any extension module&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A generated helper &lt;code&gt;RedisAPI&lt;/code&gt; is available that can wrap the client to provide a similar experience to the old API.&lt;/p&gt;
+&lt;p&gt;The main difference is that this new wrapper is generated from the &lt;a href=&quot;https://redis.io/commands/command&quot;&gt;COMMAND&lt;/a&gt; command,
+so the correct API it always exposed:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;RedisAPI redis = RedisAPI.api(client);
+
+redis.set(Arrays.asList(&lt;span class=&quot;hljs-string&quot;&gt;&quot;key1&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;value1&quot;&lt;/span&gt;), set -&amp;gt; {
+  &lt;span class=&quot;hljs-comment&quot;&gt;// ...&lt;/span&gt;
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;vert-x-amqp-client&quot;&gt;Vert.x AMQP Client&lt;/h4&gt;
+&lt;p&gt;The Vert.x AMQP client allows receiving and sending AMQP messages. It supersedes the current AMQP bridge and provide an API more
+flexible and very much user-friendly.&lt;/p&gt;
+&lt;p&gt;The Vert.x AMQP client allows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Connecting to an AMQP broker or router - SASL and TLS connections are supported&lt;/li&gt;
+&lt;li&gt;Consuming message from a queue or a topic&lt;/li&gt;
+&lt;li&gt;Sending messages to a queue or a topic&lt;/li&gt;
+&lt;li&gt;Checking acknowledgement for sent messages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The AMQP 1.0 protocol support durable subscriptions, persistence, security, conversations, sophisticated routing… More
+ details on the protocol can be found on the &lt;a href=&quot;https://www.amqp.org/&quot;&gt;AMQP homepage&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Vert.x AMQP client is based on Vert.x Proton. If you need fine-grain control, we recommend using
+&lt;a href=&quot;https://github.com/vert-x3/vertx-proton&quot;&gt;Vert.x Proton&lt;/a&gt; directly.&lt;/p&gt;
+&lt;p&gt;To use this new module, add the following to the &lt;em&gt;dependencies&lt;/em&gt; section of your Maven POM file:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs xml&quot;&gt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;io.vertx&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;vertx-amqp-client&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;3.7.0&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or, if you use Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;'io.vertx:vertx-amqp-client:3.7.0'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, you can connect to an AMQP broker:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;AmqpClientOptions options = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; AmqpClientOptions()
+      .setHost(&lt;span class=&quot;hljs-string&quot;&gt;&quot;localhost&quot;&lt;/span&gt;)
+      .setPort(&lt;span class=&quot;hljs-number&quot;&gt;5672&lt;/span&gt;)
+      .setUsername(&lt;span class=&quot;hljs-string&quot;&gt;&quot;user&quot;&lt;/span&gt;)
+      .setPassword(&lt;span class=&quot;hljs-string&quot;&gt;&quot;secret&quot;&lt;/span&gt;);
+
+AmqpClient client = AmqpClient.create(vertx, options);
+
+client.connect(ar -&amp;gt; {
+  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.failed()) {
+    System.out.println(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Unable to connect to the broker&quot;&lt;/span&gt;);
+  } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
+    System.out.println(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Connection succeeded&quot;&lt;/span&gt;);
+    AmqpConnection connection = ar.result();
+
+    &lt;span class=&quot;hljs-comment&quot;&gt;// You can create receivers and senders&lt;/span&gt;
+    connection.createReceiver(&lt;span class=&quot;hljs-string&quot;&gt;&quot;my-queue&quot;&lt;/span&gt;,
+      msg -&amp;gt; {
+        &lt;span class=&quot;hljs-comment&quot;&gt;// called on every received messages&lt;/span&gt;
+        System.out.println(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Received &quot;&lt;/span&gt; + msg.bodyAsString());
+      },
+      done -&amp;gt; {
+        &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (done.failed()) {
+          System.out.println(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Unable to create receiver&quot;&lt;/span&gt;);
+        } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
+          AmqpReceiver receiver = done.result();
+        }
+      }
+    );
+
+    connection.createSender(&lt;span class=&quot;hljs-string&quot;&gt;&quot;my-queue&quot;&lt;/span&gt;, done -&amp;gt; {
+      &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (done.failed()) {
+        System.out.println(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Unable to create a sender&quot;&lt;/span&gt;);
+      } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
+        AmqpSender sender = done.result();
+        sender.send(AmqpMessage.create().withBody(&lt;span class=&quot;hljs-string&quot;&gt;&quot;hello&quot;&lt;/span&gt;).build());
+      }
+    });
+
+  }
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;stream-pipes&quot;&gt;Stream pipes&lt;/h4&gt;
+&lt;p&gt;When it comes to streaming, back-pressure is something you need to care about.&lt;/p&gt;
+&lt;p&gt;You have very much likely heard or used the Vert.x &lt;code&gt;Pump&lt;/code&gt; API to transfer data from a read stream to a write stream while
+respecting the write stream back-pressure.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;Pipe&lt;/code&gt; a new API superseding the &lt;code&gt;Pump&lt;/code&gt; to achieve the same effect and even more, it acts like a pump and handles for you&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;read stream pause/resume&lt;/li&gt;
+&lt;li&gt;write stream termination&lt;/li&gt;
+&lt;li&gt;stream failures handling&lt;/li&gt;
+&lt;li&gt;asynchronous result upon streaming completion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can transfer a read stream to a write stream simply, the write stream will be ended upon completion of the stream&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;readStream.pipeTo(writeStream);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also be notified when the pipe completes:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;readStream.pipeTo(writeStream, ar -&amp;gt; {
+  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
+    System.out.println(&lt;span class=&quot;hljs-string&quot;&gt;&quot;done&quot;&lt;/span&gt;);
+  } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
+    System.out.println(&lt;span class=&quot;hljs-string&quot;&gt;&quot;failed &quot;&lt;/span&gt; + ar.cause());
+  }
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Creating and using an asynchronous pipe is easy&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;// The read stream will be paused until the pipe is used&lt;/span&gt;
+Pipe pipe = readStream.pipe();
+getAsyncPipe(ar -&amp;gt; {
+  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
+    pipe.to(writeStream);
+  } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
+    pipe.close();
+  }
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;kafka-admin-client&quot;&gt;Kafka admin client&lt;/h4&gt;
+&lt;p&gt;The new version brings a Vert.x based first implementation of the native &lt;a href=&quot;https://kafka.apache.org/documentation/#adminapi&quot;&gt;Kafka Admin Client API&lt;/a&gt;
+which are in Java, instead of Scala used in the previous version.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;AdminUtils&lt;/code&gt; is now deprecated and the new &lt;code&gt;KafkaAdminClient&lt;/code&gt; is available instead.
+It allows to remove the last Scala artifact dependency.&lt;/p&gt;
+&lt;p&gt;While the &lt;code&gt;AdminUtils&lt;/code&gt; implementation needs to connect to Zookeeper for administration purposes,
+the &lt;code&gt;KafkaAdminClient&lt;/code&gt; only uses the Kafka bootstrap brokers connection.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;Properties config = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; Properties();
+config.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, &lt;span class=&quot;hljs-string&quot;&gt;&quot;my-kafka-broker:9092&quot;&lt;/span&gt;);
+
+KafkaAdminClient adminClient = KafkaAdminClient.create(vertx, config);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The features currently supported are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;create and delete topics&lt;/li&gt;
+&lt;li&gt;list all the topics&lt;/li&gt;
+&lt;li&gt;describe topics for getting information about leader partition, follower replicas and ISR (in-sync replicas) list&lt;/li&gt;
+&lt;li&gt;alter topics configuration&lt;/li&gt;
+&lt;li&gt;list all consumer groups&lt;/li&gt;
+&lt;li&gt;describe consumer groups for getting information like the state, the coordinator host, consumers per topics and so on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are using the &lt;code&gt;AdminUtils&lt;/code&gt; today, consider migrate to the new &lt;code&gt;KafkaAdminClient&lt;/code&gt; because the former will be removed in Vert.x 4.0.&lt;/p&gt;
+&lt;h4 id=&quot;and-more-&quot;&gt;And more…&lt;/h4&gt;
+&lt;p&gt;Here are some other important improvements you can find in this release:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Shared data structures available in local-only mode even when Vert.x is clustered&lt;/li&gt;
+&lt;li&gt;JSON decoding without prior knowledge of the structure (object, array, string, …etc)&lt;/li&gt;
+&lt;li&gt;Infinispan Cluster Manager upgraded to &lt;a href=&quot;https://infinispan.org&quot;&gt;Infinispan&lt;/a&gt; 9.4.10.Final&lt;/li&gt;
+&lt;li&gt;And obviously we have the usual bug fixes!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;finally&quot;&gt;Finally&lt;/h4&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.7.0-Release-Notes&quot;&gt;3.7.0 release notes&lt;/a&gt; can be found on the wiki, as well as the
+list of &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.7.0-Deprecations-and-breaking-changes&quot;&gt;deprecations and breaking changes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Docker images are available on &lt;a href=&quot;https://hub.docker.com/u/vertx/&quot;&gt;Docker Hub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Vert.x distribution can be downloaded on the website but is also available from &lt;a href=&quot;http://sdkman.io/index.html&quot;&gt;SDKMan&lt;/a&gt; and &lt;a href=&quot;http://brew.sh/&quot;&gt;HomeBrew&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The event bus client using the SockJS bridge is available from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/vertx3-eventbus-client&quot;&gt;NPM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/vert-x3/vertx-bus-bower&quot;&gt;Bower&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webjars.org/&quot;&gt;WebJars&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The release artifacts have been deployed to &lt;a href=&quot;http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.vertx%22%20AND%20v%3A%223.7.0%22&quot;&gt;Maven Central&lt;/a&gt; and you can get the distribution on &lt;a href=&quot;https://bintray.com/vertx/downloads/distribution/3.7.0/view&quot;&gt;Bintray&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That’s it! Happy coding and see you soon on our user or dev &lt;a href=&quot;https://vertx.io/community&quot;&gt;channels&lt;/a&gt;.&lt;/p&gt;
+&lt;/article&gt;</description>
+	<pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>JBoss Tools Team: JBoss Tools and Red Hat CodeReady Studio for Eclipse 2019-03</title>
+	<guid isPermaLink="true">https://tools.jboss.org/blog/12.11.0.ga.html</guid>
+	<link>https://tools.jboss.org/blog/12.11.0.ga.html</link>
+	<description>&lt;div&gt;&lt;div id=&quot;preamble&quot;&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://tools.jboss.org/downloads/jbosstools/2019-03/4.11.0.Final.html&quot;&gt;JBoss Tools 4.11.0&lt;/a&gt; and &lt;a href=&quot;https://tools.jboss.org/downloads/devstudio/2019-03/12.11.0.GA.html&quot;&gt;Red Hat CodeReady Studio 12.11&lt;/a&gt; for Eclipse 2019-03 are here waiting for you. Check it out!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;crstudio12&quot; src=&quot;https://tools.jboss.org/blog/images/crstudio12.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;installation&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#installation&quot;&gt;&lt;/a&gt;Installation&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Red Hat CodeReady Studio comes with everything pre-bundled in its installer. Simply download it from our &lt;a href=&quot;https://developers.redhat.com/products/devstudio/overview/&quot;&gt;Red Hat CodeReady product page&lt;/a&gt; and run it like this:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;literalblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;pre&gt;java -jar devstudio-&amp;lt;installername&amp;gt;.jar&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;JBoss Tools or Bring-Your-Own-Eclipse (BYOE) CodeReady Studio require a bit more:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;This release requires at least Eclipse 4.11 (2019-03) but we recommend
+      using the latest &lt;a href=&quot;http://www.eclipse.org/downloads/packages/release/2019-03/r/eclipse-ide-java-ee-developers&quot;&gt;Eclipse 4.11 2019-03 JEE Bundle&lt;/a&gt; since then you get most of the dependencies preinstalled.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Once you have installed Eclipse, you can either find us on the Eclipse Marketplace under &quot;JBoss Tools&quot; or &quot;Red Hat CodeReady Studio&quot;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;For JBoss Tools, you can also use our update site directly.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;literalblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;pre&gt;http://download.jboss.org/jbosstools/photon/stable/updates/&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;what-is-new&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#what-is-new&quot;&gt;&lt;/a&gt;What is new?&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Our main focus for this release was improvements for container based development and bug fixing.
+      Eclipse 2019-03 itself has a lot of new cool stuff but let me highlight just a few updates in both Eclipse 2019-03 and JBoss Tools plugins that I think are worth mentioning.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;openshift-3&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#openshift-3&quot;&gt;&lt;/a&gt;OpenShift 3&lt;/h3&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;new-openshift-connection-helper&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#new-openshift-connection-helper&quot;&gt;&lt;/a&gt;New OpenShift connection helper&lt;/h4&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;When you need to defined a new OpenShift connection, you need to provide the following information:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;ulist&quot;&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;cluster URL&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;username and password or token&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;If you’ve already logged in your cluster through the OpenShift Web Console, you can copy an &lt;code&gt;oc&lt;/code&gt; command
+      in the clipboard that contains both the cluster URL and your token.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;So, from now, there is a new option that allows you to initialize the wizard fields from the copied &lt;code&gt;oc&lt;/code&gt;
+      command:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;connection wizard paste&quot; src=&quot;https://tools.jboss.org/documentation/whatsnew/openshift/images/connection-wizard-paste.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Click on the &lt;code&gt;Paste Login Command&lt;/code&gt; button and the fields will be initialized:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;connection wizard paste1&quot; src=&quot;https://tools.jboss.org/documentation/whatsnew/openshift/images/connection-wizard-paste1.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;server-tools&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#server-tools&quot;&gt;&lt;/a&gt;Server tools&lt;/h3&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;eap-7-2-server-adapter&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#eap-7-2-server-adapter&quot;&gt;&lt;/a&gt;EAP 7.2 Server Adapter&lt;/h4&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;A server adapter has been added to work with EAP 7.2.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;wildfly-15-server-adapter&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#wildfly-15-server-adapter&quot;&gt;&lt;/a&gt;Wildfly 15 Server Adapter&lt;/h4&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;A server adapter has been added to work with Wildfly 15. It adds support for Java EE 8.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;p&gt;Related JIRA: &lt;a href=&quot;https://issues.jboss.org/browse/JBIDE-26502&quot;&gt;JBIDE-26502&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;wildfly-16-server-adapter&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#wildfly-16-server-adapter&quot;&gt;&lt;/a&gt;Wildfly 16 Server Adapter&lt;/h4&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;A server adapter has been added to work with Wildfly 16. It adds support for Java EE 8.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;hibernate-tools&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#hibernate-tools&quot;&gt;&lt;/a&gt;Hibernate Tools&lt;/h3&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;new-runtime-provider&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#new-runtime-provider&quot;&gt;&lt;/a&gt;New Runtime Provider&lt;/h4&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The new Hibernate 5.4 runtime provider has been added. It incorporates Hibernate Core version 5.4.1.Final and Hibernate Tools version 5.4.1.Final&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;runtime-provider-updates&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#runtime-provider-updates&quot;&gt;&lt;/a&gt;Runtime Provider Updates&lt;/h4&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The Hibernate 5.3 runtime provider now incorporates Hibernate Core version 5.3.9.Final and Hibernate Tools version 5.3.9.Final.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The Hibernate 5.2 runtime provider now incorporates Hibernate Core version 5.2.18.Final and Hibernate Tools version 5.2.12.Final.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;maven&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#maven&quot;&gt;&lt;/a&gt;Maven&lt;/h3&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;maven-support-updated-to-m2e-1-11&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#maven-support-updated-to-m2e-1-11&quot;&gt;&lt;/a&gt;Maven support updated to M2E 1.11&lt;/h4&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The Maven support is based on Eclipse M2E 1.11&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;platform&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#platform&quot;&gt;&lt;/a&gt;Platform&lt;/h3&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;views-dialogs-and-toolbar&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#views-dialogs-and-toolbar&quot;&gt;&lt;/a&gt;Views, Dialogs and Toolbar&lt;/h4&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;user-defined-resource-filters-in-project-explorer&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#user-defined-resource-filters-in-project-explorer&quot;&gt;&lt;/a&gt;User defined resource filters in Project Explorer&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The &lt;strong&gt;Filters and Customization…​&lt;/strong&gt; menu in &lt;strong&gt;Project Explorer&lt;/strong&gt; now shows an additional &lt;strong&gt;User filters&lt;/strong&gt;
+      tab which can be used to exclude some resources from Project Explorer based on their name.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Full name and regular expressions are supported.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;user filters&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/user-filters.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;error-log-view-added-to-platform&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#error-log-view-added-to-platform&quot;&gt;&lt;/a&gt;Error Log view added to Platform&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The &lt;strong&gt;Error Log&lt;/strong&gt; view has been moved from the PDE project to the Platform project. See
+      &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=50517&quot;&gt;bug 50517&lt;/a&gt; for details.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;copy-to-clipboard-in-installation-details&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#copy-to-clipboard-in-installation-details&quot;&gt;&lt;/a&gt;Copy to clipboard in Installation Details&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;A copy to clipboard action has been added to all tabs of the &lt;strong&gt;Installation Details&lt;/strong&gt; dialog.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;copy installation details&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/copy-installation-details.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;copy-paste-of-environment-variables&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#copy-paste-of-environment-variables&quot;&gt;&lt;/a&gt;Copy &amp;amp; paste of Environment Variables&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The &lt;strong&gt;Environment&lt;/strong&gt; tab in a &lt;strong&gt;Launch configuration&lt;/strong&gt; dialog supports copy &amp;amp; paste actions now. The environment
+      variables are transferred as text data, so it is not only possible to copy &amp;amp; paste between two different
+      launch configurations, but also between the launch configuration and e.g. some text editor or the command line.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;env var copy paste&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/env-var-copy-paste.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;This feature is available in all launch configurations which use the common &lt;strong&gt;Environment&lt;/strong&gt; tab.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;useful-links-to-add-projects-to-empty-workspace&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#useful-links-to-add-projects-to-empty-workspace&quot;&gt;&lt;/a&gt;Useful links to add projects to empty workspace&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;When Eclipse IDE is started for the first time or with a new workspace, it may not be intuitive for new users
+      on how to proceed. To help the users in getting started, the following useful links have been provided to add
+      a project to the workspace:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;ulist&quot;&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;Perspective specific project creation wizard&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Generic New Project wizard&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Import projects wizard&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;ProjectExplorer&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/ProjectExplorer.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;new-mnemonics-in-error-log-view&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#new-mnemonics-in-error-log-view&quot;&gt;&lt;/a&gt;New mnemonics in Error Log view&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;New mnemonics have been added for &lt;strong&gt;Export Entry…​&lt;/strong&gt; and &lt;strong&gt;Event Detail&lt;/strong&gt; entries in the context menu of &lt;strong&gt;Error Log&lt;/strong&gt; view.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;mneumonics&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/mneumonics.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;themes-and-styling&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#themes-and-styling&quot;&gt;&lt;/a&gt;Themes and Styling&lt;/h4&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;improved-dark-theme-for-mac&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#improved-dark-theme-for-mac&quot;&gt;&lt;/a&gt;Improved Dark theme for Mac&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The Dark theme for Mac has been improved to use the colors from the macOS system dark appearance. Some of the
+      notable changes in Eclipse IDE are the dark window title bar, menus, file dialogs, combos and buttons.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Note: This change is available on macOS Mojave and later.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Before:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;darktheme before&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/darktheme-before.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;After:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;darktheme after&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/darktheme-after.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;improved-dark-theme-for-windows&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#improved-dark-theme-for-windows&quot;&gt;&lt;/a&gt;Improved Dark theme for Windows&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The drawing operations have been improved in Windows so the custom drawn icons look better now.
+      For example, check the close icon below.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Before:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;closebutton before&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/closebutton_before.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;After:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;closebutton after&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/closebutton_after.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;general-updates&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#general-updates&quot;&gt;&lt;/a&gt;General Updates&lt;/h4&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;performance-improvements&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#performance-improvements&quot;&gt;&lt;/a&gt;Performance improvements&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The startup and interactive performance of multiple operations has been improved again in this release.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;java-developement-tools-jdt&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#java-developement-tools-jdt&quot;&gt;&lt;/a&gt;Java Developement Tools (JDT)&lt;/h3&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;java-12-support&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#java-12-support&quot;&gt;&lt;/a&gt;Java 12 Support&lt;/h4&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;java-12&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#java-12&quot;&gt;&lt;/a&gt;Java 12&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://jdk.java.net/12/&quot;&gt;Java 12&lt;/a&gt; is out and Eclipse JDT supports Java 12 for 4.11 via
+      &lt;a href=&quot;https://marketplace.eclipse.org/content/java-12-support-eclipse-2019-03-411&quot;&gt;Marketplace&lt;/a&gt;. The release
+      notably includes the following Java 12 feature:
+      &lt;a href=&quot;http://openjdk.java.net/jeps/325&quot;&gt;JEP 325: Switch Expressions (Preview)&lt;/a&gt;. Please note that this is a
+      &lt;a href=&quot;http://openjdk.java.net/jeps/12&quot;&gt;preview language feature&lt;/a&gt; and hence enable preview option should be on.
+      For an informal introduction of the support, please refer to
+      &lt;a href=&quot;https://wiki.eclipse.org/Java12/Examples&quot;&gt;Java 12 Examples wiki&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;junit&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#junit&quot;&gt;&lt;/a&gt;JUnit&lt;/h4&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;junit-5-4&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#junit-5-4&quot;&gt;&lt;/a&gt;JUnit 5.4&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://junit.org/junit5/docs/5.4.0/release-notes/&quot;&gt;JUnit 5.4&lt;/a&gt; is here and Eclipse JDT has been
+      updated to use this version.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;test-factory-template&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#test-factory-template&quot;&gt;&lt;/a&gt;Test factory template&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;JUnit Jupiter now allows test factory methods to return a single &lt;code&gt;&lt;code&gt;DynamicNode&lt;/code&gt;&lt;/code&gt;. The &lt;code&gt;&lt;code&gt;test_factory&lt;/code&gt;&lt;/code&gt;
+      template has been updated to include &lt;code&gt;&lt;code&gt;DynamicNode&lt;/code&gt;&lt;/code&gt; in the return type.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;junit test template&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/junit-test-template.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;java-editor&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#java-editor&quot;&gt;&lt;/a&gt;Java Editor&lt;/h4&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;default-and-constant-values-in-content-assist-information-pop-up&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#default-and-constant-values-in-content-assist-information-pop-up&quot;&gt;&lt;/a&gt;Default and constant values in content assist information pop-up&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The additional information pop-up of a content assist proposal now shows the default value
+      of an annotation type element:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;default value annotation type elelemt&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/default-value-annotation-type-elelemt.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;and the value of a constant:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;constant value&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/constant-value.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;create-service-provider-method&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#create-service-provider-method&quot;&gt;&lt;/a&gt;Create service provider method&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;If a service defined in a &lt;code&gt;&lt;code&gt;module-info.java&lt;/code&gt;&lt;/code&gt; file has an invalid service provider implementation,
+      a &lt;strong&gt;Quick Fix (Ctrl + 1)&lt;/strong&gt; is now available to create the new provider method:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;service provider proposal&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/service-provider-proposal.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;service provider linked proposal&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/service-provider-linked-proposal.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;java-formatter&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#java-formatter&quot;&gt;&lt;/a&gt;Java Formatter&lt;/h4&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;line-wrapping-settings-for-binary-operators&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#line-wrapping-settings-for-binary-operators&quot;&gt;&lt;/a&gt;Line wrapping settings for binary operators&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Instead of a single line wrapping setting for binary expressions, there’s now a whole section of settings
+      for various kinds of &lt;strong&gt;binary operators&lt;/strong&gt; (multiplicative, additive, logical, etc.). There are settings
+      for &lt;em&gt;relational&lt;/em&gt; (including equality) and &lt;em&gt;shift&lt;/em&gt; operators, which were not covered by the old setting.
+      Also, &lt;em&gt;string concatenation&lt;/em&gt; can now be treated differently from arithmetic sum.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The settings can be found in the Profile Editor (&lt;strong&gt;Preferences &amp;gt; Java &amp;gt; Code Style &amp;gt; Formatter &amp;gt; Edit…​&lt;/strong&gt;)
+      under the &lt;strong&gt;Line Wrapping &amp;gt; Wrapping settings &amp;gt; Binary expressions&lt;/strong&gt; subsection.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;formatter wrap binary expressions&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/formatter-wrap-binary-expressions.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;white-space-settings-for-binary-operators&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#white-space-settings-for-binary-operators&quot;&gt;&lt;/a&gt;White space settings for binary operators&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The white space around operators in &lt;strong&gt;binary expressions&lt;/strong&gt; can now be controlled separately for different groups
+      of operators, consistent with the line wrapping settings.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The new &lt;strong&gt;Binary operators&lt;/strong&gt; sub-section has been added under White Space &amp;gt; Expressions in the Formatter
+      profile editor.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;formatter spaces binary expressions&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/formatter-spaces-binary-expressions.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;wrapping-setting-for-chained-conditional-expressions&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#wrapping-setting-for-chained-conditional-expressions&quot;&gt;&lt;/a&gt;Wrapping setting for chained conditional expressions&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;A chain of &lt;em&gt;nested conditional expressions&lt;/em&gt; (using ternary operator) can be now wrapped as a single group,
+      with all of them indented at the same level. It’s only possible for right-sided nesting.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Find the &lt;strong&gt;Chained conditionals&lt;/strong&gt; setting in the Profile Editor under the
+      &lt;strong&gt;Line Wrapping &amp;gt; Wrapping settings &amp;gt; Other expressions&lt;/strong&gt; subsection.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;formatter wrap chained conditionals&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/formatter-wrap-chained-conditionals.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;indent-javadoc-tag-descriptions&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#indent-javadoc-tag-descriptions&quot;&gt;&lt;/a&gt;Indent Javadoc tag descriptions&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The Formatter Profile has a new setting that indents wrapped Javadoc tag descriptions.
+      It’s called &lt;em&gt;Indent other tag descriptions when wrapped&lt;/em&gt;, in contrast to the preexisting &lt;em&gt;Indent wrapped
+      @param/@throws descriptions&lt;/em&gt; setting. It affects tags like &lt;code&gt;&lt;code&gt;@return&lt;/code&gt;&lt;/code&gt; or &lt;code&gt;&lt;code&gt;@deprecated&lt;/code&gt;&lt;/code&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The settings can be found in the Profile Editor (&lt;strong&gt;Preferences &amp;gt; Java &amp;gt; Code Style &amp;gt; Formatter &amp;gt; Edit…​&lt;/strong&gt;)
+      under the &lt;strong&gt;Comments &amp;gt; Javadocs&lt;/strong&gt; section.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;formatter indent tags&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/formatter-indent-tags.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;debug&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#debug&quot;&gt;&lt;/a&gt;Debug&lt;/h4&gt;
+      &lt;div class=&quot;sect4&quot;&gt;
+      &lt;h5 id=&quot;history-for-expressions-in-the-variables-view&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#history-for-expressions-in-the-variables-view&quot;&gt;&lt;/a&gt;History for expressions in the Variables view&lt;/h5&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The &lt;strong&gt;Variables&lt;/strong&gt; view now stores a history of the expressions used in the &lt;strong&gt;Detail&lt;/strong&gt; pane. You can choose
+      a &lt;em&gt;previously entered expression&lt;/em&gt; for a variable from the new drop-down menu. The expression will be
+      copied to the &lt;strong&gt;Detail&lt;/strong&gt; pane where you can select it to perform various actions present in the context menu.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;expressions history&quot; src=&quot;https://www.eclipse.org/eclipse/news/4.11/images/expressions-history.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;and-more&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#and-more&quot;&gt;&lt;/a&gt;And more…​&lt;/h3&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;You can find more noteworthy updates in on &lt;a href=&quot;https://tools.jboss.org/documentation/whatsnew/jbosstools/4.11.0.Final.html&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;what-is-next&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#what-is-next&quot;&gt;&lt;/a&gt;What is next?&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Having JBoss Tools 4.11.0 and Red Hat CodeReady Studio 12.11 out we are already working on the next release for Eclipse 2019-06.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Enjoy!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Jeff Maury&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Mon, 01 Apr 2019 20:35:27 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: Welcome Gabriela!</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/Ar_6mKh1Spw/welcome-gabriela</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/Ar_6mKh1Spw/welcome-gabriela</link>
+	<description>We'd like to welcome Gabriela Motroc to the Eclipse Foundation as a Content Marketing Specialist based in Germany!&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/Ar_6mKh1Spw&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Mon, 01 Apr 2019 14:40:00 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: Thank You for Taking the Jakarta EE 2019 Developer Survey!</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/q90YGK_0yag/thank-you-taking-jakarta-ee-2019-developer-survey</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/q90YGK_0yag/thank-you-taking-jakarta-ee-2019-developer-survey</link>
+	<description>The survey wrapped up at midnight on Monday, March 25, with over 1,770 responses from developers around the globe.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/q90YGK_0yag&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Mon, 01 Apr 2019 13:40:00 +0000</pubDate>
+</item>
+<item>
+	<title>Thabang Mashologu: Welcome Gabriela!</title>
+	<guid isPermaLink="false">https://blogs.eclipse.org/6687 at https://blogs.eclipse.org</guid>
+	<link>https://blogs.eclipse.org/post/thabang-mashologu/welcome-gabriela</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;I am happy to announce that Gabriela Motroc has joined the Eclipse Foundation as a Content Marketing Specialist based in Germany.&lt;/p&gt;
+
+&lt;p&gt;Gabriela joins us from the Software &amp;amp; Support Media Group, where she was an editor of &lt;a href=&quot;http://jaxenter.com/&quot;&gt;JAXenter.com&lt;/a&gt; and JAX Magazine. She is well known to many in the Eclipse community and recently spearheaded JAXenter’s excellent &lt;a href=&quot;https://jaxenter.com/understanding-jakarta-ee-series-little-150668.html&quot;&gt;Understanding Jakarta EE Series&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Gabriela holds a Master’s degree in International Communication Management and a B.A. Journalism. Her knowledge and experience will be great assets in developing and sharing updates, news, and content that motivates, educates, and inspires the engagement of our community.&lt;/p&gt;
+
+&lt;p&gt;Please join me in welcoming Gabriela to the Eclipse Foundation marketing team.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/eclipse-foundation&quot;&gt;Eclipse Foundation&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/marketing-0&quot;&gt;Marketing&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/jakarta-ee&quot;&gt;Jakarta EE&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Mon, 01 Apr 2019 13:12:24 +0000</pubDate>
+</item>
+<item>
+	<title>Maximilian and Jonas: Single-sourcing web &amp; mobile forms with JSON Forms</title>
+	<guid isPermaLink="false">https://eclipsesource.com/?p=41130</guid>
+	<link>https://eclipsesource.com/blogs/2019/04/01/single-sourcing-web-mobile-forms-with-json-forms/</link>
+	<description>&lt;p&gt;JSON Forms is a framework for efficiently developing form-based UIs based on JSON Schema. It provides a simple declarative JSON based...&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://eclipsesource.com/blogs/2019/04/01/single-sourcing-web-mobile-forms-with-json-forms/&quot; rel=&quot;nofollow&quot;&gt;Single-sourcing web &amp;amp; mobile forms with JSON Forms&lt;/a&gt; appeared first on &lt;a href=&quot;https://eclipsesource.com&quot; rel=&quot;nofollow&quot;&gt;EclipseSource&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Mon, 01 Apr 2019 09:32:35 +0000</pubDate>
+</item>
+<item>
+	<title>Donald Raab: Our journey to 1000 GitHub stars and commits</title>
+	<guid isPermaLink="false">https://medium.com/p/efa442bf3603</guid>
+	<link>https://medium.com/@donraab/our-journey-to-1000-github-stars-and-commits-efa442bf3603?source=rss-df39b86e9f04------2</link>
+	<description>&lt;p&gt;Taking note of an important milestone, how we got here, and where we go next.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*c2lR0FCHgmwdl_SWPP1jGQ.jpeg&quot; /&gt;&lt;/figure&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; became a reality at the Eclipse Foundation at the end of 2015. We had successfully migrated GS Collections to the Eclipse Foundation to become Eclipse Collections. An announcement was &lt;a href=&quot;https://www.infoq.com/news/2016/01/GS-Collections-Eclipse-Foundn&quot;&gt;published at InfoQ in January 2016&lt;/a&gt; on the migration.&lt;/p&gt;&lt;blockquote&gt;By partnering with the Eclipse Foundation, we hope to grow a vibrant and open community of contributors and committers around the Eclipse Collections project.&lt;/blockquote&gt;&lt;p&gt;The GS Collections project had only allowed contributions from Goldman Sachs developers. At the Eclipse Foundation, anyone can contribute to the Eclipse Collections project as long as they sign the &lt;a href=&quot;https://www.eclipse.org/legal/ECA.php&quot;&gt;Eclipse Contributor Agreement&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;At the time of the move to the Eclipse Foundation, GS Collections had reached 1400 stars on GitHub. After three years of hard work, &lt;a href=&quot;https://www.eclipse.org/collections/&quot;&gt;Eclipse Collections&lt;/a&gt; has reached the milestone of 1000 GitHub stars. I marked the milestone in Twitter.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/605/1*uocRVs2CcbqJXMmTFc4YqA.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;With 49 contributors so far, we are realizing our dream of building a vibrant and open community around Eclipse Collections. Contributors are welcome &lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;&lt;h3&gt;We started from zero stars three years ago&lt;/h3&gt;&lt;p&gt;Although GS Collections is no longer actively developed, it has continued growing from 1400 stars in 2016 to over 1700 on GitHub today.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/785/1*x8iY3Xv-l8QP5yKFxwN5CA.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;Eclipse Collections started at zero stars in 2016 and passed the 1000 star milestone earlier this month. This has been thanks to the support of our growing community. We are fortunate to have some motivated and inspirational Eclipse Collections advocates who help us raise awareness by acting as information radiators and amplifiers.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/783/1*I2ujSELCUYEY_Cg80Mzt1Q.png&quot; /&gt;&lt;/figure&gt;&lt;h3&gt;How did we get here?&lt;/h3&gt;&lt;p&gt;I gave a talk at the Open Source Strategy Forum in 2017 which explained some of the things we have done to help increase awareness of Eclipse Collections. The title of the talk was “&lt;a href=&quot;https://opensourcestrategyforum.org/talks/cant-hear-mute/&quot;&gt;They Can’t Hear You On Mute&lt;/a&gt;.” It took a lot more than this to get us here.&lt;/p&gt;&lt;h4&gt;There is no “I” in Open Source.&lt;/h4&gt;&lt;p&gt;We got where we are today because we worked hard to build a community of energized contributors and vocal advocates. The success of Eclipse Collections has been driven by the support of its vibrant and open developer community. The first thing we had to do was build this community from the ground floor. We actively encourage developers to contribute to the project in numerous ways.&lt;/p&gt;&lt;p&gt;We have promoted the approach of using code katas for learning and teaching the framework. The code katas for Eclipse Collections can be found &lt;a href=&quot;https://github.com/eclipse/eclipse-collections-kata&quot;&gt;here&lt;/a&gt;. One of the greatest contributions someone can make to a framework is to learn it, use it and then to teach it to others. The Eclipse Collections Kata was taught recently at a &lt;a href=&quot;https://ti.to/dublin-java-user-group/Eclipse-Collections-Kata-Barry-Evans/&quot;&gt;Dublin Java User Group meet-up&lt;/a&gt;.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/604/1*8m1L5D6OXahAEIuN2XIvhQ.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;Teaching is the best way to learn, and a great way to contribute. Thank you to all the teachers!&lt;/p&gt;&lt;p&gt;We’ve seen multiple blogs and articles written by members of the community, in addition to many tweets. We continue to make rounds at conferences and Java User Group meet-ups, and are happy to hand out Eclipse Collections stickers to anyone who wants one.&lt;/p&gt;&lt;p&gt;Every little bit helps. Thank you to everyone who has contributed to our success.&lt;/p&gt;&lt;h3&gt;You can’t get there from here&lt;/h3&gt;&lt;p&gt;The committers on the project balance their day jobs with engaging with the open source Java community at tech conferences, on Twitter, writing blogs and articles, reviewing issues and pull requests, and occasionally adding new features to the framework. Our role as committers has changed significantly from the days when we were primarily contributors and our focus was to write code we needed for the projects we worked on. Our job now is to raise awareness, provide training, increase adoption, encourage and promote the contributions of others, and continue to build the community. We are actively looking out for developers who are interested in vesting themselves in the framework to the level at which they can become the next committers on the project.&lt;/p&gt;&lt;p&gt;You can become a Committer and even Project Lead on an open source project if you set that as a goal and demonstrate you are vested in supporting the project. Below is a link to a great blog post which explains the process of becoming a Committer on an open source project at the Eclipse Foundation.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://waynebeaton.wordpress.com/2018/02/08/the-eclipse-committer-election-workflow/&quot;&gt;https://waynebeaton.wordpress.com/2018/02/08/the-eclipse-committer-election-workflow/&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Thank you to everyone in the community&lt;/h3&gt;&lt;p&gt;We received our 1000th commit on the same day that we reached 1000 stars on GitHub. Thank you to our entire Eclipse Collections developer community for helping us reach this second amazing milestone!&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1003/1*T6At97Vi2xtq5uDp7IFsyw.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;If you look at the activity in Eclipse Collections since the beginning, you will see a fairly steady flow of work being contributed by our amazing community.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/755/1*gX2ugFubsUdsE3G6_dsidA.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;It is a nice milestone to have now passed 1000 commits, and it was cool to unlock this achievement on the same day we passed 1000 stars. I gave a shout out on Twitter to the developer who helped us pass this milestone.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/604/1*VY59WgQ5G-DtXZjoMP97CQ.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;Thank you to all of the contributors who helped Eclipse Collections reach 1000 commits.&lt;/p&gt;&lt;h3&gt;Open source will surprise you&lt;/h3&gt;&lt;p&gt;In 2018, the greatest surprise contribution from the open source community came in the form of Jackson serialization support for Eclipse Collections types in the jackson-datatypes-collections project.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/FasterXML/jackson-datatypes-collections&quot;&gt;FasterXML/jackson-datatypes-collections&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This is an amazing contribution to all users of Eclipse Collections who also use the Jackson library for serialization support. We literally did not see this contribution coming, until it arrived. I had hoped someone would be interested in providing this support, and I am very thankful to the developer who worked on it.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/FasterXML/jackson-datatypes-collections&quot;&gt;Star this repo&lt;/a&gt; if you use a third-party collections library and benefit from the the Jackson serialization support provided by one of the amazing developers who contribute their time and energy to make our lives as developers easier.&lt;/p&gt;&lt;p&gt;We sent some Eclipse Collections mugs and stickers to the developer who made this awesome contribution to the open source Java community.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/607/1*rrjoQPuyg5qm3Vu3Jp-4-Q.png&quot; /&gt;Be willing to be surprised, and remember to say thank you.&lt;/figure&gt;&lt;h3&gt;What’s next for Eclipse Collections?&lt;/h3&gt;&lt;p&gt;We’re hoping to see our 50th, 60th, and maybe 100th contributor, and our 6th, 7th and maybe even 10th committer by the end of 2019. We appreciate contributions of any kind. No contribution is too small.&lt;/p&gt;&lt;p&gt;We’d also like to pass 2000 stars in 2019. We can’t get there without further building our community, so expect to see some energized Eclipse Collections advocates presenting at technical conferences and Java User Group meet-ups throughout 2019.&lt;/p&gt;&lt;p&gt;We will be releasing version 10.0 of the project in the next few months. The project has become stable enough that we have not done a major release since September 2017. The addition of default methods in Java 8 has made it possible for us to safely release API changes in minor releases, so the &lt;a href=&quot;https://medium.com/@donraab/eclipse-collections-9-1-released-24c413d200ec&quot;&gt;9.1&lt;/a&gt; and &lt;a href=&quot;https://medium.com/oracledevs/eclipse-collections-9-2-released-aa88b56ecacc&quot;&gt;9.2&lt;/a&gt; releases had quite a few new APIs added.&lt;/p&gt;&lt;h3&gt;One last thank you for the journey ahead&lt;/h3&gt;&lt;p&gt;Eclipse Collections is an open source project built by an amazing developer community for an amazing developer community. We love Java, and we are thankful to the &lt;a href=&quot;https://www.eclipse.org/&quot;&gt;Eclipse Foundation&lt;/a&gt; for giving us a great place to build our community.&lt;/p&gt;&lt;p&gt;Thank you to all those that have helped the project reach this stage in its evolution. Thank you to all those that continue to help us as we move the project forward and as we look to build our community further.&lt;/p&gt;&lt;p&gt;I hope this blog reaches developers out there who have been interested in joining an open source community and making their first contribution. We are here and happy to help you take that first step.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; is open for &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;&lt;em&gt;contributions&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. If you like the library, you can let us know by starring it on GitHub.&lt;/em&gt;&lt;/p&gt;&lt;img height=&quot;1&quot; src=&quot;https://medium.com/_/stat?event=post.clientViewed&amp;amp;referrerSource=full_rss&amp;amp;postId=efa442bf3603&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Mon, 01 Apr 2019 03:59:23 +0000</pubDate>
+</item>
+<item>
+	<title>Orion: Announcing Orion 20</title>
+	<guid isPermaLink="false">http://planetorion.org/news/?p=915</guid>
+	<link>http://planetorion.org/news/2019/03/announcing-orion-20/</link>
+	<description>&lt;p&gt;We are pleased to announce the twentieth release of Orion, “Your IDE in the Cloud”. You can run it now at &lt;a href=&quot;https://orionhub.org/&quot;&gt;OrionHub,&lt;/a&gt; from &lt;a href=&quot;https://www.npmjs.com/package/orion&quot;&gt;NPM&lt;/a&gt; or &lt;a href=&quot;https://download.eclipse.org/orion/drops/R-20.0-201903291844/index.html&quot;&gt;download the server&lt;/a&gt; to run your own instance locally.&lt;/p&gt;
+
+
+
+&lt;p&gt;Once again, thank you to all committers and contributors for your hard work this release. &lt;/p&gt;
+
+
+
+&lt;p&gt;This release was focussed entirely on accessibility.&lt;/p&gt;</description>
+	<pubDate>Fri, 29 Mar 2019 19:25:08 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Ditto: Announcing Ditto Milestone 0.9.0-M1</title>
+	<guid isPermaLink="true">https://www.eclipse.org/ditto/2019-03-28-milestone-announcement-090-M1.html</guid>
+	<link>https://www.eclipse.org/ditto/2019-03-28-milestone-announcement-090-M1.html</link>
+	<description>&lt;p&gt;Today the Ditto team is happy to announce the first milestone of the upcoming release 
+&lt;a href=&quot;https://projects.eclipse.org/projects/iot.ditto/releases/0.9.0&quot;&gt;0.9.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Have a look at the Milestone &lt;a href=&quot;https://www.eclipse.org/ditto/release_notes_090-M1.html&quot;&gt;0.9.0-M1 release notes&lt;/a&gt; for what changed in detail.&lt;/p&gt;
+
+&lt;p&gt;The main changes and new features since the last release &lt;a href=&quot;https://www.eclipse.org/ditto/release_notes_080.html&quot;&gt;0.8.0&lt;/a&gt; are&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;memory optimizations when working with millions of digital twins&lt;/li&gt;
+  &lt;li&gt;enhance connectivity to also be able to establish connections to Apache Kafka&lt;/li&gt;
+  &lt;li&gt;providing more detailed metrics for connections&lt;/li&gt;
+  &lt;li&gt;cluster bootstrapping stability improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;artifacts&quot;&gt;Artifacts&lt;/h2&gt;
+
+&lt;p&gt;The new Java artifacts have been published at the &lt;a href=&quot;https://repo.eclipse.org/content/repositories/ditto/&quot;&gt;Eclipse Maven repository&lt;/a&gt;
+as well as &lt;a href=&quot;https://repo1.maven.org/maven2/org/eclipse/ditto/&quot;&gt;Maven central&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Docker images have been pushed to Docker Hub:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-policies/&quot;&gt;eclipse/ditto-policies&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-things/&quot;&gt;eclipse/ditto-things&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-things-search/&quot;&gt;eclipse/ditto-things-search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-gateway/&quot;&gt;eclipse/ditto-gateway&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-connectivity/&quot;&gt;eclipse/ditto-connectivity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-concierge/&quot;&gt;eclipse/ditto-concierge&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img alt=&quot;Ditto&quot; class=&quot;docimage&quot; src=&quot;https://www.eclipse.org/ditto/images/ditto.svg&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;–&lt;br /&gt;
+The Eclipse Ditto team&lt;/p&gt;</description>
+	<pubDate>Thu, 28 Mar 2019 04:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>Fabio Zadrozny: LiClipse 5.2.2 released</title>
+	<guid isPermaLink="false">tag:blogger.com,1999:blog-7855001383687474475.post-5274877453732983738</guid>
+	<link>http://liclipse.blogspot.com/2019/03/liclipse-522-released.html</link>
+	<description>This version does an updated of the main dependencies of LiClipse.&lt;br /&gt;&lt;br /&gt;It's now based on:&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Eclipse 4.11 (also named 2019-03)&lt;/li&gt;&lt;li&gt;PyDev (5.2.2) &lt;/li&gt;&lt;li&gt;EGit (5.3.0)&lt;/li&gt;&lt;/ul&gt;As a note, it seems I haven't updated this blog as often as I should (I end up putting more effort into announcing the PyDev updates) but just to note, LiClipse is always updated whenever PyDev is updated.&lt;br /&gt;&lt;br /&gt;Enjoy! &lt;br /&gt;&lt;br /&gt;</description>
+	<pubDate>Wed, 27 Mar 2019 13:46:27 +0000</pubDate>
+	<author>noreply@blogger.com (Fabio Zadrozny)</author>
+</item>
+<item>
+	<title>Thabang Mashologu: Thank You for Taking the Jakarta EE 2019 Developer Survey!</title>
+	<guid isPermaLink="false">https://blogs.eclipse.org/6684 at https://blogs.eclipse.org</guid>
+	<link>https://blogs.eclipse.org/post/thabang-mashologu/thank-you-taking-jakarta-ee-2019-developer-survey</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p dir=&quot;ltr&quot;&gt;The Jakarta EE 2019 Developer Survey, organized by the &lt;a href=&quot;https://jakarta.ee/&quot;&gt;Jakarta EE Working Group&lt;/a&gt;, is now closed. The survey wrapped up at midnight on Monday, March 25, with&lt;strong&gt; over 1,770 responses&lt;/strong&gt; from developers around the globe. Truly an outstanding response from an amazing community!&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Thank you all for taking the time to participate in this year’s survey. We greatly appreciate your valuable input on enterprise and cloud native application development trends, priorities, and approaches.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;We look forward to sharing the key findings and insights from your survey responses. The results will be published in late April.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Stay tuned and thanks again!&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/x_Kxjni_ZF-_Z4ZQYRxYVHGomHStHfokBBNypqEnOpLr9Wz0Ji_ximVdtj9GNZaSXSSpV7wDErGPdZxYfsGRW8GrUbQyy2FwNU8B-I0xEs4kA5JvZt8v4F00At-OnqzhWtO1AT5T&quot; style=&quot;height: 312px; width: 624px;&quot; /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/jakarta-ee&quot;&gt;Jakarta EE&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/developer-survey&quot;&gt;developer survey&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/community&quot;&gt;Community&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Tue, 26 Mar 2019 20:38:52 +0000</pubDate>
+</item>
+<item>
+	<title>Tanja Obradovic: How to participate in advancing Jakarta EE Specification: Marketing and Promotional Work</title>
+	<guid isPermaLink="false">https://blogs.eclipse.org/6683 at https://blogs.eclipse.org</guid>
+	<link>https://blogs.eclipse.org/post/tanja-obradovic/how-participate-advancing-jakarta-ee-specification-marketing-and-promotional</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/lxzwUXhsUOJmUliLJhdKYgwweOXp51w2EigWbsBMi_TDmEo-rWG5iftFbCTMgUA1tg-s2EU1xuPxwNOkqzWbvnGKmuBo1lcfgVMHM6A6QaDrgQhtWZ7NrM0UI5Oh22ZTdCi5uTXS&quot; style=&quot;height: 207px; width: 591px;&quot; /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;We all know in this day and age, marketing and social media are essential.  Social media is an effective way to stay connected with the Jakarta EE community. By informing the community about project milestones, progress, news around Jakarta EE, and how to become a contributor, you can help build and maintain this active community. Here are some ways in which you can help spread the word and participate:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li dir=&quot;ltr&quot;&gt;
+	&lt;p dir=&quot;ltr&quot;&gt;Follow Jakarta EE on social media&lt;/p&gt;
+
+	&lt;ul&gt;
+		&lt;li dir=&quot;ltr&quot;&gt;
+		&lt;p dir=&quot;ltr&quot;&gt;Twitter: @JakartaEE&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li dir=&quot;ltr&quot;&gt;
+		&lt;p dir=&quot;ltr&quot;&gt;Facebook: Jakarta EE&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li dir=&quot;ltr&quot;&gt;
+		&lt;p dir=&quot;ltr&quot;&gt;LinkedIn Group: Jakarta.EE&lt;/p&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li dir=&quot;ltr&quot;&gt;
+	&lt;p dir=&quot;ltr&quot;&gt;Write your own Jakarta EE related posts and repost our content&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li dir=&quot;ltr&quot;&gt;
+	&lt;p dir=&quot;ltr&quot;&gt;Add your blog to jakartablogs.ee by following these &lt;a href=&quot;https://github.com/jakartaee/jakartablogs.ee#guidelines&quot;&gt;guidelines&lt;/a&gt;&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li dir=&quot;ltr&quot;&gt;
+	&lt;p dir=&quot;ltr&quot;&gt;Subscribe to our mailing-lists&lt;a href=&quot;https://jakarta.ee/connect/&quot;&gt; https://jakarta.ee/connect/&lt;/a&gt;&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;If you have any blogs, websites or other content related to Jakarta EE, let us know! We can promote your work and increase its reach within the community.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Same goes for any events you may be planning or event ideas you have. If it’s related to Jakarta EE, chances are we’d love a piece of it, just make sure to submit an &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLSe16i4otNN_8cZ0iXBjZIB_YWgfi_5lq1jzJyUh9zBPnHlIPQ/viewform&quot;&gt;event form&lt;/a&gt; with all the details.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/javaee&quot;&gt;#JavaEE&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/jakartaee&quot;&gt;#JakartaEE&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/marketing&quot;&gt;#marketing&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/opensource&quot;&gt;#OpenSource&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/communitywork&quot;&gt;#CommunityWork&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Mon, 25 Mar 2019 18:01:53 +0000</pubDate>
+</item>
+<item>
+	<title>Chris Aniszczyk: Troubles with the Open Source Gig Economy and Sustainability Tip Jar</title>
+	<guid isPermaLink="false">https://www.aniszczyk.org/?p=4272</guid>
+	<link>https://www.aniszczyk.org/2019/03/25/troubles-with-the-open-source-gig-economy-and-sustainability-tip-jar/</link>
+	<description>&lt;p&gt;There has been a lot of discussions lately on open source sustainability and honestly, it’s something I think about on a daily basis through my current role at The Linux Foundation and myself being an open source contributor and maintainer for ~20 years.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Open Source Tip Jars&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;There has been a trend lately to have open source communities/projects open an electronic tip jar for individuals (or organizations) to give back. While a tip jar can raise some funds, it’s truly not sustainable long term, as outside of it not being an effective way to raise funds for project development, it puts maintainers unfortunately in a gig style economy without health and retirement benefits. There are only a &lt;a href=&quot;https://reference.kemitchell.com/top-donations-developers.html&quot;&gt;handful of individual maintainers&lt;/a&gt; are making money from donations, most tend to &lt;a href=&quot;https://twitter.com/chuhnk/status/1105603400228495360&quot;&gt;abandon&lt;/a&gt; the approach over time.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Take Patreon as an example, a popular funding platform for all sorts of things including open source projects that has been around since 2013 and has paid out &lt;a href=&quot;https://www.cnbc.com/2019/01/23/crowd-funding-platform-patreon-announces-it-will-pay-out-half-a-billion-dollars-to-content-creators-in-2019.html&quot;&gt;$1 billion to creators&lt;/a&gt; since then. While that’s an astonishing figure, Patreon isn’t a sustainable business with its current private company model and level of &lt;a href=&quot;https://www.crunchbase.com/organization/patreon&quot;&gt;VC funding of $105M&lt;/a&gt;:&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;&lt;p&gt;&lt;em&gt;“Under the company’s current business model, 90 percent of funds are paid directly to content creators. Patreon takes 5 percent, and the remaining 5 percent covers transaction fees.” Patreon CEO Jack Conte said in an interview with CNBC, that the platform will soon be facing the challenge of maintaining a profitable model as the company continues its growth.&lt;/em&gt;&lt;br /&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;In 2019, the company is also on track to pay out $500 million to content creators, 5% of that is $25 million and Patreon has ~300 employees, so probably not even covering their labor costs. Also, when the creators don’t have much say in the governance of the organization they depend on, especially if it’s a privately funded company, the &lt;a href=&quot;https://techcrunch.com/2019/03/19/patreon-ups-its-revenue-cut-but-grandfathers-in-old-creators/&quot;&gt;terms&lt;/a&gt; can change &lt;a href=&quot;https://tech.slashdot.org/story/17/12/09/0318233/patreon-hits-donors-with-new-fees-angering-creators&quot;&gt;overnight&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;&lt;p&gt;&lt;em&gt;“So today, Patreon is overhauling its pricing. Any creator can still get a 5 percent rate, but just for a Lite version without bonus tools or different fan tiers. All of Patreon’s extra features will now be in the Pro plan, with an 8 percent rate, but with existing creators grandfathered in at 5 percent. And the new Premium enterprise plan for 12 percent (9 percent for existing creators) will offer full-service merchandise sales, multi-user team accounts and dedicated customer support. Patreon now has 3 million fans paying 100,000 creators more than half a billion dollars per year, and it will cross $1 billion in payouts in 2019 after six years in business. But Patreon was starving on its 5 percent rate, which some venture capitalists tell me is why they passed on its funding rounds totaling $105 million led by Thrive Capital and Index. Now it might make enough to keep the lights on, retain ownership and maybe even earn a profit one day.”&lt;/em&gt;&lt;br /&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;I guess we will see if Patreon is truly sustainable in the long run for its community and investors, it currently isn’t working out so well for most creators (“&lt;a href=&quot;https://theoutline.com/post/2571/no-one-makes-a-living-on-patreon&quot;&gt;No one makes a living on Patreon&lt;/a&gt;”).&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;As a note, this also applies to smaller open source mini-patreon style fundraising efforts such as BountySource, OpenCollective, GitCoin, Fundition, Librepay and &lt;a href=&quot;http://oss.fund&quot;&gt;more&lt;/a&gt;. For example, I strongly admire OpenCollective and their &lt;a href=&quot;https://medium.com/open-collective/2018-update-2d48e8c68568&quot;&gt;transparency&lt;/a&gt; for a private &lt;a href=&quot;https://www.crunchbase.com/organization/opencollective#section-overview&quot;&gt;VC funded company&lt;/a&gt; (on a side note, I also admire companies like Buffer who go further with &lt;a href=&quot;https://buffer.com/transparency&quot;&gt;transparency dashboards&lt;/a&gt;), from their level of &lt;a href=&quot;https://docs.opencollective.com/help/about/investors&quot;&gt;funding as a startup&lt;/a&gt; to more. However, they are &lt;a href=&quot;https://github.com/opencollective/opencollective/issues/1458&quot;&gt;facing similar sustainability problems on a smaller scale&lt;/a&gt; if you look at the &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1uNDoafJyI50o128tjV2HjJGrf8l4bGOorJdSL8qgPyk/edit?usp=drive_web&amp;amp;ouid=110672742540891099057&quot;&gt;financials&lt;/a&gt; over time (their burn rate allows for 6-12 months depending on their growth), also maintainers don’t own any equity in the company. If this was a normal VC company the investors would cut their losses in my opinion.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;It’s also interesting to see some nonprofit options out there like Liberapay &lt;a href=&quot;https://github.com/liberapay/liberapay.org/issues/2&quot;&gt;founded in 2015 in France&lt;/a&gt; that is running on a break-even basis for all that I can tell. I think part of the sustainable solution for funding platforms is to build one in a way where it lives in a neutral place where creators have a say in governance and ownership. Outside of supporting projects forming their own companies, I’m interested in innovative startups like &lt;a href=&quot;https://tidelift.com/&quot;&gt;Tidelift&lt;/a&gt; which are experimenting with new approaches to make it easier for open source maintainers to get paid for their work by essentially by offering a subscription product and acting as a guarantor of sorts.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;Note: I don’t think any of the blockchain coins will solve this problem or any problem for that matter.&lt;/em&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Open Source Gig Economy&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;My biggest issue with these fundraising platforms is that even if we ever get to a point where some developers are making money, who pays for their health and retirement benefits (I know this is dependent on country but in many countries employers assist with retirement benefits). There has been a ton of press and &lt;a href=&quot;https://www.bls.gov/news.release/conemp.nr0.htm&quot;&gt;research&lt;/a&gt; as of late on the gig economy, usually featuring &lt;a href=&quot;https://www.brookings.edu/blog/the-avenue/2018/03/29/rethinking-worker-benefits-for-an-economy-in-flux/&quot;&gt;Uber/Lyft in the news&lt;/a&gt;:&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.theguardian.com/business/2017/jul/11/gig-economy-review-delivers-benefits-but-brings-no-job-security&quot;&gt;“Gig economy review delivers benefits but brings no job security”&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.brookings.edu/blog/the-avenue/2018/03/29/rethinking-worker-benefits-for-an-economy-in-flux/&quot;&gt;“Rethinking worker benefits for an economy in flux”&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/749cb87e-6ca8-11e7-b9c7-15af748b60d0&quot;&gt;“Uber or Deliveroo offers flexibility, but the isolation and stress can take their toll”&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;In the US and many countries, there are different protections for “employees” versus “independent contractors” and leads to a lot of situations where you &lt;a href=&quot;https://onlabor.org/workers-benefits-and-protections-in-the-u-s-gig-economy/&quot;&gt;lose protections&lt;/a&gt; depending on how you’re classified. &lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;We can do better than having developers run in a hamster wheel of no benefits and protections offered via normal employment schemes. It’s not sustainable and not fair to developers.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Conclusion and Corporate Open Source Sustainability&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;I don’t think there is one solution for open source sustainability but I do strongly feel that VC-funded donation platforms that fuel the gig economy are not the best solutions for long term sustainability (even Patreon had to expand its business model outside just donations). There’s a part of me that feels some of this donation discussion echoes the past discussion of &lt;a href=&quot;http://www.shirky.com/weblog/2009/02/why-small-payments-wont-save-publishers/&quot;&gt;micropayments and publishers&lt;/a&gt;. This &lt;a href=&quot;https://www.youtube.com/watch?v=G6ZupYzr_Zg&amp;amp;index=14&amp;amp;list=PLbzoR-pLrL6qAgIuy5ft7CNWD7UQ4XdIS&amp;amp;t=500s&quot;&gt;presentation&lt;/a&gt; from GitLab about how their business model evolved over time from the early days donations to consultancy to open core product business does a great job of showing the pitfalls of a variety of common approaches:&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-embed-twitter wp-block-embed is-type-rich is-provider-twitter&quot;&gt;&lt;div class=&quot;wp-block-embed__wrapper&quot;&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;In the age of hyper-clouds, we're betting on buyer-based open core &lt;img alt=&quot;🙌&quot; class=&quot;wp-smiley&quot; src=&quot;https://s.w.org/images/core/emoji/11.2.0/72x72/1f64c.png&quot; style=&quot;height: 1em;&quot; /&gt;&lt;br /&gt;&lt;br /&gt;Catch &lt;a href=&quot;https://twitter.com/sytses?ref_src=twsrc%5Etfw&quot;&gt;@sytses&lt;/a&gt;' keynote on open source business models from &lt;a href=&quot;https://twitter.com/hashtag/LFOSLS?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#LFOSLS&lt;/a&gt;:&lt;a href=&quot;https://t.co/qyQv7eYEL3&quot;&gt;https://t.co/qyQv7eYEL3&lt;/a&gt;&lt;/p&gt;— GitLab (@gitlab) &lt;a href=&quot;https://twitter.com/gitlab/status/1109213418840571905?ref_src=twsrc%5Etfw&quot;&gt;March 22, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;Also, we should revisit the premise that open source isn’t sustainable to begin with, I think many folks in the community are selling short the progress that has been made over time in supporting open source. I’d like to make the argument that we are better off today than we were in the past. In fact, some &lt;a href=&quot;https://dirkriehle.com/2013/08/22/paid-vs-volunteer-work-in-open-source/&quot;&gt;research&lt;/a&gt; shows that “about 50% of all open source software development has been paid work for many years now and that many small projects are fully paid for by companies.” The reality is that there are still projects that fall through the cracks like OpenSSL that were &lt;a href=&quot;https://venturebeat.com/2014/05/29/everyone-uses-openssl-but-nobodys-willing-to-fix-it-except-the-linux-foundation/&quot;&gt;aided eventually by the Core Infrastructure Initiative&lt;/a&gt;, so as long as we can discover and catch those we will be in good shape.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;We should remember that a big part of innovation comes from developers working at organizations adopting open source software at scale and using it in interesting ways. It’s these organizations that should be tasked to sustain open source software versus individuals, especially since they depend on open source software to survive as a business. I also think it’s high time that &lt;a href=&quot;https://en.wikipedia.org/wiki/Corporate_sustainability&quot;&gt;corporate sustainability&lt;/a&gt; and social responsibility initiatives include open source contribution as part of them. I’ve seen some initiatives recently that I admire from organizations:&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.citusdata.com/blog/2018/10/24/why-citus-data-is-donating-1-percent-equity/&quot;&gt;CitusData donated 1% of their equity to the open source community&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://events.linuxfoundation.org/wp-content/uploads/2017/12/Software-Philanthropy-for-Everyone-Kevin-P.-Fleming-Bloomberg.pdf&quot;&gt;Bloomberg has a software philanthropy budget for projects they depend on&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fosdem.org/2019/schedule/event/community_sustaining_foss_projects_democratizing_sponsorship/attachments/slides/3405/export/events/attachments/community_sustaining_foss_projects_democratizing_sponsorship/slides/3405/FOSSFund_FOSDEM_2019_Duane_OBrien.pdf&quot;&gt;Indeed democratizes the open source sponsorship process with its employees&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stripe.com/blog/stripe-open-source-retreat&quot;&gt;Stripe hosts open source retreats to give back to open source projects&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;I truly hope to continue to see the trend of companies giving back to open source through contribution (fiscally or code) as I believe it’s key to open source sustainability and one of the reasons I co-founded the &lt;a href=&quot;https://todogroup.org/&quot;&gt;TODO Group&lt;/a&gt; and collaborate today with an excellent set of peers teaching organizations about the benefits of open source programs and why contributing back is good for business.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;In the end, there are many ways to fund and sustain open source projects, from starting companies that sell open source based products and deliver value for customers, to working at organizations and having them dedicate time to contribute to open source and many more. I highly recommend visiting the &lt;a href=&quot;http://oss.fund&quot;&gt;oss.fund&lt;/a&gt; sheet to see what funding options are out there (also look at &lt;a href=&quot;http://oss.cash&quot;&gt;oss.cash&lt;/a&gt; to see large businesses built around open source technology). On a related note, I’m personally excited about the &lt;a href=&quot;https://communitybridge.org/&quot;&gt;Community Bridge&lt;/a&gt; platform from the Linux Foundation which I was personally involved with: &lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-embed-twitter wp-block-embed is-type-rich is-provider-twitter&quot;&gt;&lt;div class=&quot;wp-block-embed__wrapper&quot;&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;Introducing CommunityBridge, a platform to accelerate innovation, sustainability, funding, security, mentoring, and diversity in open source projects. Join the private early access program: &lt;a href=&quot;https://t.co/22eGhqNbCt&quot;&gt;https://t.co/22eGhqNbCt&lt;/a&gt;&lt;/p&gt;— The Linux Foundation (@linuxfoundation) &lt;a href=&quot;https://twitter.com/linuxfoundation/status/1105581918278635521?ref_src=twsrc%5Etfw&quot;&gt;March 12, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;CommunityBridge will automate some of the activities the Linux Foundation performs as an organization to benefit open source sustainability, from basic funding, expense reimbursement, mentorships and to paid internships that may lead to full time jobs with benefits. &lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Anyways, thanks for reading and I hope you learned something new about open source and understand why I think the charity/donation approach won’t work well for long term open source sustainability.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;</description>
+	<pubDate>Mon, 25 Mar 2019 14:41:18 +0000</pubDate>
+</item>
+<item>
+	<title>Christian Pontesegger: JFace TableViewer sorting via Drag and Drop</title>
+	<guid isPermaLink="false">tag:blogger.com,1999:blog-3460102793186140898.post-6733293349492915246</guid>
+	<link>http://codeandme.blogspot.com/2019/03/jface-tableviewer-sorting-via-drag-and.html</link>
+	<description>Recently I wanted to sort elements in a &lt;i&gt;TableViewer&lt;/i&gt; via drag and drop and was astonished that I could not find  existing helper classes or tutorial for this fairly trivial use case. So here is one for you in case you got the same use case.&lt;br /&gt;&lt;br /&gt;Source code for this tutorial is available on github as a &lt;a href=&quot;https://github.com/Pontesegger/codeandme/blob/master/Code%20&amp;amp;%20Me%20Blog/TableViewer_DnD_Sorting.zip?raw=true&quot; target=&quot;_blank&quot;&gt;single zip archive&lt;/a&gt;, as a &lt;a href=&quot;https://github.com/Pontesegger/codeandme/blob/master/Code%20&amp;amp;%20Me%20Blog/TableViewer_DnD_Sorting.psf?raw=true&quot;&gt;Team Project Set&lt;/a&gt; or you can &lt;a href=&quot;https://github.com/Pontesegger/codeandme/tree/master/ui/TableViewer%20DnD%20Sorting&quot; target=&quot;_blank&quot;&gt;browse the files&lt;/a&gt; online.&lt;br /&gt;&lt;br /&gt;If you are just interested in the helper class, have a look at &lt;a href=&quot;https://github.com/Pontesegger/codeandme/blob/master/ui/TableViewer%20DnD%20Sorting/src/com/codeandme/tableviewer/dnd/sorting/DnDSortingSupport.java&quot; target=&quot;_blank&quot;&gt;DnDSortingSupport&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;&lt;u&gt;Prerequisites:&lt;/u&gt;&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;To have something to work on I will start with a &lt;i&gt;TableViewer&lt;/i&gt; containing some data stored in a &lt;i&gt;java.util.List&lt;/i&gt;. It is a default &lt;i&gt;TableViewer&lt;/i&gt; and therefore I expect you have something similar ready for your experiments.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;&lt;u&gt;Step 1: Add drag support&lt;/u&gt;&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://www.eclipse.org/articles/Article-SWT-DND/DND-in-SWT.html&quot; target=&quot;_blank&quot;&gt;Drag and Drop support for SWT&lt;/a&gt; is implemented via &lt;i&gt;DragSource&lt;/i&gt; and &lt;i&gt;DropTarget&lt;/i&gt; instances. To define that we can drag data, we need to bind a &lt;i&gt;DragSource&lt;/i&gt; to a &lt;i&gt;Control&lt;/i&gt;. &lt;br /&gt;&lt;pre class=&quot;brush: java&quot;&gt;  DragSource dragSource = new DragSource(tableViewer.getControl(), DND.DROP_MOVE);&lt;br /&gt;  dragSource.setTransfer(LocalSelectionTransfer.getTransfer());&lt;br /&gt;  dragSource.addDragListener(new DragSourceAdapter() {&lt;br /&gt;&lt;br /&gt;   @Override&lt;br /&gt;   public void dragStart(DragSourceEvent event) {&lt;br /&gt;    event.doit = !tableViewer.getStructuredSelection().isEmpty();&lt;br /&gt;   }&lt;br /&gt;&lt;br /&gt;   @Override&lt;br /&gt;   public void dragSetData(DragSourceEvent event) {&lt;br /&gt;    if (LocalSelectionTransfer.getTransfer().isSupportedType(event.dataType)) {&lt;br /&gt;     LocalSelectionTransfer.getTransfer().setSelection(tableViewer.getStructuredSelection());&lt;br /&gt;     LocalSelectionTransfer.getTransfer().setSelectionSetTime(event.time &amp;amp; 0xFFFF);&lt;br /&gt;    }&lt;br /&gt;   }&lt;br /&gt;&lt;br /&gt;   @Override&lt;br /&gt;   public void dragFinished(DragSourceEvent event) {&lt;br /&gt;    LocalSelectionTransfer.getTransfer().setSelection(null);&lt;br /&gt;    LocalSelectionTransfer.getTransfer().setSelectionSetTime(0);&lt;br /&gt;   }&lt;br /&gt;  });&lt;br /&gt;&lt;/pre&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;In line 1 we create the &lt;i&gt;DragSource&lt;/i&gt; and define allowed DnD operations. As we want to sort elements, we only allow &lt;i&gt;DND.MOVE&lt;/i&gt; operations. Then we define the way data gets transferred from the &lt;i&gt;DragSource&lt;/i&gt; to the &lt;i&gt;DropTarget&lt;/i&gt;. As we stay within  the same Eclipse application we may use a &lt;i&gt;LocalSelectionTransfer&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;The first thing that happens on a drag is &lt;i&gt;dragStart()&lt;/i&gt;. Technically the selection cannot be empty as we have to select something before we start the operation, so this implementation is merely to understand how we could deny the operation right from the start.&lt;br /&gt;&lt;br /&gt;After the drop operation got accepted in the &lt;i&gt;DropTarget&lt;/i&gt; (see below) we get asked to &lt;i&gt;dragSetData()&lt;/i&gt; and define what data we are moving. &lt;i&gt;setSelectionSetTime()&lt;/i&gt; is not needed by our &lt;i&gt;DropTarget&lt;/i&gt;, so again this is for completeness only.&lt;br /&gt;&lt;br /&gt;Finally we need to clean up after the operation is done.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;&lt;u&gt;Step 2: Add drop support&lt;/u&gt;&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;Implementation is similar like before, just now we need a &lt;i&gt;DropTarget&lt;/i&gt;. Instead of writing our own &lt;i&gt;DropTargetListener&lt;/i&gt; we may use a &lt;i&gt;ViewerDropAdapter&lt;/i&gt; which covers most of the required work already.&lt;br /&gt;&lt;pre class=&quot;brush: java&quot;&gt;  DropTarget dropTarget = new DropTarget(tableViewer.getControl(), DND.DROP_MOVE);&lt;br /&gt;  dropTarget.setTransfer(LocalSelectionTransfer.getTransfer());&lt;br /&gt;  dropTarget.addDropListener(new ViewerDropAdapter(tableViewer) {&lt;br /&gt;&lt;br /&gt;   @Override&lt;br /&gt;   public void dragEnter(DropTargetEvent event) {&lt;br /&gt;    // make sure drag was triggered from current tableViewer&lt;br /&gt;    if (event.widget instanceof DropTarget) {&lt;br /&gt;     boolean isSameViewer = tableViewer.getControl().equals(((DropTarget) event.widget).getControl());&lt;br /&gt;     if (isSameViewer) {&lt;br /&gt;      event.detail = DND.DROP_MOVE;&lt;br /&gt;      setSelectionFeedbackEnabled(false);&lt;br /&gt;      super.dragEnter(event);&lt;br /&gt;     } else&lt;br /&gt;      event.detail = DND.DROP_NONE;&lt;br /&gt;    } else&lt;br /&gt;     event.detail = DND.DROP_NONE;&lt;br /&gt;   }&lt;br /&gt;&lt;br /&gt;   @Override&lt;br /&gt;   public boolean validateDrop(Object target, int operation, TransferData transferType) {&lt;br /&gt;    return true;&lt;br /&gt;   }&lt;br /&gt;&lt;br /&gt;   @Override&lt;br /&gt;   public boolean performDrop(Object target) {&lt;br /&gt;    int location = determineLocation(getCurrentEvent());&lt;br /&gt;    if (location == LOCATION_BEFORE) {&lt;br /&gt;     if (modelManipulator.insertBefore(getSelectedElement(), getCurrentTarget())) {&lt;br /&gt;      tableViewer.refresh();&lt;br /&gt;      return true;&lt;br /&gt;     }&lt;br /&gt;&lt;br /&gt;    } else if (location == LOCATION_AFTER) {&lt;br /&gt;     if (modelManipulator.insertAfter(getSelectedElement(), getCurrentTarget())) {&lt;br /&gt;      tableViewer.refresh();&lt;br /&gt;      return true;&lt;br /&gt;     }&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    return false;&lt;br /&gt;   }&lt;br /&gt;&lt;br /&gt;   private Object getSelectedElement() {&lt;br /&gt;    return ((IStructuredSelection) LocalSelectionTransfer.getTransfer().getSelection()).getFirstElement();&lt;br /&gt;   }&lt;br /&gt;  });&lt;br /&gt;&lt;/pre&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;i&gt;dragEnter()&lt;/i&gt; is the first thing that happens on the drop part of DnD. The default implementation is already fine. Our implementation additionally checks that the drag source is our current &lt;i&gt;TableViewer&lt;/i&gt;. Further we disable the selectionFeedback. The feedback visually shows the user whether we drop before an element, on the element, or after it. The &lt;i&gt;ViewerDropAdapter&lt;/i&gt; already supports these kind of feedbacks. Until &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=545733&quot; target=&quot;_blank&quot;&gt;bug 545733&lt;/a&gt; gets fixed the helper class contains a small patch to provide before/after feedback only. It does not make sense to drop on another element when we do sorting, right?&lt;br /&gt;&lt;br /&gt;&lt;i&gt;validateDrop()&lt;/i&gt; will be queried multiple times. We might check that we do not drop the table element on itself, but we spared this check for the current example.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;performDrop()&lt;/i&gt; finally implements the drop operation. To keep the helper class generic I used an interface that allows to insert elements before or after another element. An implementation of it needs to be passed to the helper class.&lt;br /&gt;&lt;br /&gt;&lt;pre class=&quot;brush: java&quot;&gt; public interface IModelManipulator {&lt;br /&gt;  boolean insertBefore(Object source, Object target);&lt;br /&gt;&lt;br /&gt;  boolean insertAfter(Object source, Object target);&lt;br /&gt; }&lt;/pre&gt;The helper class comes with an implementation for &lt;i&gt;java.util.List&lt;/i&gt;, which you may reuse.&lt;br /&gt;&lt;br /&gt;</description>
+	<pubDate>Mon, 25 Mar 2019 12:31:12 +0000</pubDate>
+	<author>noreply@blogger.com (Christian Pontesegger)</author>
+</item>
+
+</channel>
+</rss>

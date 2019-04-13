@@ -1,0 +1,31 @@
+package com.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+
+import com.dao.Counter;
+import com.repository.CounterRepository;
+
+@Component
+public class CounterService {
+
+	@Autowired
+	CounterRepository counterRepository;
+
+	public void getCounter() {
+
+		List<Counter> counterList = counterRepository.findAll();
+		if (StringUtils.isEmpty(counterList)) {
+			Counter counter = new Counter("1", 1);
+			counterRepository.insert(counter);
+		} else {
+			Counter counter = counterList.get(0);
+			counter.setId("2");
+			counterRepository.save(counter);
+			counterList.forEach(c -> System.out.println(c.toString()));
+		}
+	}
+}

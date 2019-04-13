@@ -1,0 +1,10 @@
+package com.service;
+
+public class AccountService {
+
+	
+	public static String generatevCode() {
+		
+		return "98765";
+	}
+}

@@ -1,0 +1,17 @@
+package testing;
+
+import java.util.Random;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Random rand = new Random();
+
+		int n = rand.nextInt();
+		System.out.println(n);
+		int value=n*1000;
+		System.out.println(value);
+
+	}
+
+}

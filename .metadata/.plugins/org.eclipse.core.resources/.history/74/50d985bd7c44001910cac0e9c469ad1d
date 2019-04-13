@@ -1,0 +1,20 @@
+package com;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
+
+import com.mongodb.MongoClient;
+
+@Configuration
+public class AppConfig {
+
+	
+	@Bean
+	public MongoOperation getMongoOperation() {
+		MongoOperations mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "EasyTapp"));
+		return mongoOps;
+	}
+}

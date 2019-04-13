@@ -1,0 +1,22 @@
+package com.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.dao.Counter;
+import com.repository.CounterRepository;
+
+@Component
+public class CounterService {
+
+	@Autowired
+	CounterRepository counterRepository;
+	
+	
+	public void getCounter() {
+		
+		List<Counter> counterList=counterRepository.findAll();
+	}
+}

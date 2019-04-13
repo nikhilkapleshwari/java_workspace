@@ -1,0 +1,16 @@
+package com.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.model.User;
+import com.repository.UserRepository;
+
+public class MongoDao {
+
+	@Autowired
+	UserRepository userRepository;
+	
+	public void insertUser(User user) {
+		userRepository.insert(user);
+	}
+}

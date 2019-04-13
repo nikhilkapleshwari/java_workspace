@@ -1,0 +1,12 @@
+package com;
+
+import org.springframework.data.mongodb.core.MongoOperations;
+
+public class MongoDBOperation {
+
+	
+	public void save(MongoOperations mongoOperations,User user) {
+		System.out.println("Saving user.");
+		mongoOperations.save(user);
+	}
+}

@@ -1,0 +1,10 @@
+package com.constant;
+
+public class CommonConstant {
+
+	private CommonConstant() {
+		
+	}
+	
+	private static final Long VCODE_VALID_TS=new Long("5");
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;EasyTappApi/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;SpringDataMongoDb&apos;&#x0D;&#x0A;- Destination element: &apos;EasyTappApi/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     SpringDataMongoDb/src/main/java/com.service&#x0D;&#x0A;     SpringDataMongoDb/src/main/java/com.repository" description="Copy packages" destination="=EasyTappApi/src\/main\/java" element1="/src\/main\/java&lt;com.service" element2="/src\/main\/java&lt;com.repository" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1552822870413" version="1.0"/>
+</session>

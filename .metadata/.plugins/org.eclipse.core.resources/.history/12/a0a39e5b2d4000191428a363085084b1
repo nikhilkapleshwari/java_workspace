@@ -1,0 +1,23 @@
+package com;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+
+@EnableMongoRepositories(basePackageClasses=UserRepository.class)
+@Configuration
+public class MongoDbConfig {
+
+	CommandLineRunner commandLineRunner(UserRepository userRepository) {
+		return new CommandLineRunner() {
+
+			public void run(String... args) throws Exception {
+			User user1=new User(1,"nikhil",1000);
+			User user2=new User(2,"anurag",2000);
+				
+			}
+			
+		};
+		
+	}
+}

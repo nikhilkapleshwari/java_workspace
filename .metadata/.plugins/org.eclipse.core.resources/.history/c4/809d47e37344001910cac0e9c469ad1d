@@ -1,0 +1,53 @@
+package com.service;
+
+
+import java.util.List;
+import java.util.Objects;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.Person;
+import com.PersonRepository;
+import com.dao.User;
+import com.repository.UserRepository;
+
+
+@Component
+public class UserService {
+
+	@Autowired
+	PersonRepository personRepository;
+	
+	@Autowired
+	UserRepository userRepository;
+	
+	@Autowired
+	CounterService counterService;
+	
+	public void sayHello() {
+		System.out.println("Hello guys!");
+	}
+	
+	public void getAllPerson(){
+		List<Person> personList=personRepository.findAll();
+		personList.forEach(p->System.out.println(p.toString()));
+	}
+	
+	
+	public List<User> getAllUsers(){
+		return userRepository.findAll();
+	}
+	
+	public User insertUser(User user) {
+		User alreadyUser=userRepository.findByUserName(user.getUserName());
+		if(Objects.nonNull(alreadyUser)) {
+			System.out.println("User already present: "+alreadyUser.getUserName());
+			return null;
+		}
+		user.setUserId(String.valueOf(counterService.getCounter()));
+		return userRepository.insert(user);
+	}
+	
+	
+}

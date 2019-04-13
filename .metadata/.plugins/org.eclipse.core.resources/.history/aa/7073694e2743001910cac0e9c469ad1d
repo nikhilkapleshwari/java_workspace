@@ -1,0 +1,25 @@
+package com;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
+import org.springframework.data.mongodb.core.MongoClientFactoryBean;
+
+import com.mongodb.client.MongoClient;
+
+@Configuration
+public class AppConfig extends AbstractMongoClientConfiguration{
+
+	@Bean
+	public MongoClient mongoClient() {
+		MongoClientFactoryBean mongo = new MongoClientFactoryBean();
+        mongo.setHost("localhost");
+        return mongo;
+	}
+
+	@Override
+	protected String getDatabaseName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

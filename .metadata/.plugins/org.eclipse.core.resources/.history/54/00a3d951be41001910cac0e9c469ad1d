@@ -1,0 +1,18 @@
+package com.dao;
+
+public class MongoDBConnector {
+
+	private MongoDBConnector() {
+		
+	}
+	
+	private static class MongoDBConnectorHelper{
+		
+		public static final MongoDBConnector mongoDBConnector=new MongoDBConnector();
+		
+	}
+	
+	public static MongoDBConnector getInstance() {
+		return MongoDBConnectorHelper.mongoDBConnector;
+	}
+}
