@@ -137,7 +137,8 @@ public class UserController {
 		return Boolean.FALSE;
 	}
 
-	@CrossOrigin(origins = "http://theindependentdeveloper.com")
+	@CrossOrigin(origins = { "http://theindependentdeveloper.com", "http://139.59.59.19:3001",
+			"http://139.59.59.19:3001/initForgotPwdLink" })
 	@RequestMapping(path = "/initForgotPwdLink", method = RequestMethod.POST)
 	public String initForgotPwdLink(@RequestBody String json) {
 		JsonNode jsonNode = JsonConverter.getJsonNode(json);
