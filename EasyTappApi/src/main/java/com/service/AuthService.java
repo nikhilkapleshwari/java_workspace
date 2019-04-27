@@ -59,10 +59,13 @@ public class AuthService {
 	public boolean updatePassword(final String userName, final String currentPassword, final String password) {
 
 		if (this.validateUser(userName, currentPassword)) {
-			userService.updateUser(userName, ImmutableMap.of("password", password));
-			return Boolean.TRUE;
+			return userService.updateUser(userName, ImmutableMap.of("password", password));
 		}
 		return Boolean.FALSE;
+	}
+
+	public boolean resetPassword(final String userName, final String password) {
+		return userService.updateUser(userName, ImmutableMap.of("password", password));
 	}
 
 	public boolean updatevCode(final String userName, final String vCode) {
@@ -70,8 +73,7 @@ public class AuthService {
 		User user = userService.getUser(userName);
 
 		if (Objects.nonNull(user)) {
-			userService.updateUser(userName, ImmutableMap.of("vCode", vCode, "vCodeValidTs", LocalDate.now()));
-			return Boolean.TRUE;
+			return userService.updateUser(userName, ImmutableMap.of("vCode", vCode, "vCodeValidTs", LocalDate.now()));
 		}
 		return Boolean.FALSE;
 	}
@@ -81,8 +83,7 @@ public class AuthService {
 		User user = userService.getUser(userName);
 
 		if (Objects.nonNull(user)) {
-			userService.updateUser(userName, ImmutableMap.of("isAccountVerified", isAccountVerified));
-			return Boolean.TRUE;
+			return userService.updateUser(userName, ImmutableMap.of("isAccountVerified", isAccountVerified));
 		}
 		return Boolean.FALSE;
 	}

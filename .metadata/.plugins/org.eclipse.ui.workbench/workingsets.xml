@@ -42,9 +42,9 @@
 <item elementID="=EasyTapp" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1552718063254_5" label="MultimoduleApproach" name="MultimoduleApproach">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EasyTappModule" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EasyTappCommonProject" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EasyTappDbProject" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EasyTappModule" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1541824513917_2" label="Window Working Set" name="Aggregate for window 1541824513917"/>
 <mruList name="EasyTappProject"/>
