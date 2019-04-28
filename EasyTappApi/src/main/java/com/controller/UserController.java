@@ -113,12 +113,12 @@ public class UserController {
 		String password = jsonNode.get("password").textValue();
 		Response response = new Response();
 		if (authService.resetPassword(userName, password)) {
-			System.out.println("password reset successfully!");
+			// System.out.println("password reset successfully!");
 			String vCode = AccountService.generatevCode();
 			// vCode is updated so as to generate new token every time.
 			userService.updateUser(userName, ImmutableMap.of("vCode", vCode));
 			response.setMessage("Password updated successfully.");
-			System.out.println("sending response back...");
+			// System.out.println("sending response back...");
 			return new ResponseEntity<>(response, HttpStatus.CREATED);
 		}
 		response.setMessage("Invalid user name!");
