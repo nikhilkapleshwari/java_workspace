@@ -27,6 +27,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Microservices_WorkSpace"/>
 			<item value="C:\Java_WorkSpace\EcomParent"/>
 		</list>
 		<list key="projectNameTemplate">

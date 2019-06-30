@@ -46,7 +46,11 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EasyTappDbProject" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EasyTappModule" type="4"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1560270391480_6" label="MicroServices" name="MicroServices">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Game-Catalog-Service" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1541824513917_2" label="Window Working Set" name="Aggregate for window 1541824513917"/>
+<mruList name="MicroServices"/>
 <mruList name="EasyTappProject"/>
 <mruList name="MultimoduleApproach"/>
 </workingSetManager>

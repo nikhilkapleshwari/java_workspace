@@ -1,9 +1,0 @@
-package com.service;
-
-import java.util.HashMap;
-import java.util.Map;
-
-public class AuthService {
-
-	private static Map map=new HashMap<String,String>();
-}
